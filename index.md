@@ -1,8 +1,6 @@
 ---
 ---
 
-<img src="/img/logo.png" title="RECON logo" alt="RECON logo" />
-
 The **R** **E**pidemics **Con**sortium (RECON) is an international
 not-for-profit, **non-governmental organisation** gathering experts in data
 science, modelling methodology, public health, and software development to
@@ -35,7 +33,7 @@ increasingly dedicated to:
 - *disseminating knowledge*: RECON provides free, open-access training material
    on its training platform [reconlearn.org](https://reconlearn.org), and
    regularly organises workshops and short courses on outbreak analytics and
-   data science. Our [public forum ](/forum), freely accessible to anyone, is
+   data science. freely accessible to anyone, is
    dedicated to sharing exptertise on these topics.
 
 - *outbreak response deployment*: RECON supports the deployment of data
@@ -48,5 +46,5 @@ increasingly dedicated to:
 *incorporated association* regulated by the French law (registration number
 W751246083), in accordance to the association law of 1st July 1901 and the
 decree of the 16th August 1901. For more information about the remit of RECON,
-check our official statutes in [English](documents/statutes_en_1.1.pdf) or in
-[French](documents/statutes_fr_1.1.pdf).
+check our official statutes in English or in
+French.
