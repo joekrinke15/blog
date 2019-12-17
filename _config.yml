@@ -21,7 +21,7 @@ description: Data Scientist
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  Resources:
+  Projects:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
   CV: "img/Joseph_Krinke_Resume__No_Projects__All_awards_.pdf"
