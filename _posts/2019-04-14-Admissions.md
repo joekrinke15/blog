@@ -2,7 +2,7 @@
 layout: post
 title: Will I get into graduate school?
 subtitle: Predicting graduate school admissions using student credentials.
-image: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQplNKPPr0IPQgUovSMUMiZlpDMWf34VNmPqyTQJa0jenTAFuxH&s
+image: https://cen.acs.org/content/cen/articles/93/i36/Opening-Stress-Graduate-School/_jcr_content/articlebody/subpar/articlemedia_0.img.jpg/1466568393792.jpg
 ---
 
 
