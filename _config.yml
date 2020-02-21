@@ -23,8 +23,6 @@ navbar-links:
   About Me: "aboutme"
   Projects:
     - Heart Perfusion Prediction: "https://joekrinke15.github.io/2019-12-17-PredictingAbnormalHeartPerfusion/"
-    - Evaluating the National Supported Work Program: "https://joekrinke15.github.io/2019-12-15-JobProgramEffectiveness/"
-    - College Admissions: "https://joekrinke15.github.io/2019-04-14-Admissions/"
   CV: "img/Joseph_Krinke_Resume__No_Projects__All_awards_.pdf"
 
 # Image to show in the navigation bar - image must be a square (width = height)
