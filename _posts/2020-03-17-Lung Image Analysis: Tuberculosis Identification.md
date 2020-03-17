@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Identifying Tuberculosis Using Lung Images
+title: Identifying Tuberculosis Using Lung X-ray Images
 image: https://www.medicaldevice-network.com/wp-content/uploads/sites/11/2019/10/shutterstock_1117647020.jpg
 ---
 # Lung Image Analysis: Tuberculosis Identification
