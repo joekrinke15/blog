@@ -1,4 +1,9 @@
 
+---
+layout: post
+title: Identifying Tuberculosis Using Lung Images
+image: https://www.medicaldevice-network.com/wp-content/uploads/sites/11/2019/10/shutterstock_1117647020.jpg
+---
 # Lung Image Analysis: Tuberculosis Identification
 
 This project uses lung image data to build a model that determines whether or not you have tuberculosis based on an x-ray of your lung. The goal would be to flag images as high or low priority to be reviewed by a physician. An algorithm of this type could lead to many benefits for those recieving healthcare and for the healthcare system as a whole. X-ray images are generally evaluated by a radiologist who, as a physician, has very valuable time. Reducing the amount of images a radiologist has to examine could lead to a cost reduction for patients and hospitals. Additionally, given how contagious and dangerous tuberculosis can be, being able to identify the presence of disease quickly may help prevent further infection or death. This can also be used as a proof of concept for using lung imagery to identify other diseases thay affect the lungs such as cystic fibrosis or COVID-19.
