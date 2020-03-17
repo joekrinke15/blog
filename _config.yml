@@ -22,7 +22,7 @@ url: "https://joekrinke15.github.io"
 navbar-links:
   About Me: "aboutme"
   Projects:
-    - Identifying Tuberculosis Using Lung Images: "https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/_posts/2020-03-17-Lung%20Image%20Analysis:%20Tuberculosis%20Identification"
+    - Identifying Tuberculosis Using Lung Images: "https://github.com/joekrinke15/JoeKrinke15.github.io/edit/master/_posts/2020-03-17-Lung%20Image%20Analysis:%20Tuberculosis%20Identification.md"
     - Heart Perfusion Prediction: "https://joekrinke15.github.io/2019-12-17-PredictingAbnormalHeartPerfusion/"
   CV: "img/Joseph_Krinke_Resume__No_Projects__All_awards_.pdf"
 
