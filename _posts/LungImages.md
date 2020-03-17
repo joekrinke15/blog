@@ -66,7 +66,8 @@ plt.show()
 ```
 
 
-#ADD IMAGE HERE
+![Image of Diseased and Healthy Lungs](https://raw.githubusercontent.com/joekrinke15/JoeKrinke15.github.io/master/img/LungSamplePictures.PNG)
+
 
 
 My target variable is a binary class where 1 indicates the presence of pneumonia and 0 indicates healthy lungs. I have a set of 662 images of lungs (half healthy and half unhealthy) along with their corresponding labels. Each image is approximately 2900x2900, but the sizes can vary so they needed to be resized to a standard size. Additionally, I decided to convert the images from RGB to grayscale in order to reduce the dimensionality of the data. This transformation is especially appropriate since x-rays are black-and-white images to begin with. The data is clean and has been properly labeled by physicians. No normalization is necessary as the numeric values the pixels can take have the exact same range [0-256].
@@ -143,7 +144,7 @@ plt.show()
 ```
 
 
-#Add Image Here
+![ROC Curve](https://raw.githubusercontent.com/joekrinke15/JoeKrinke15.github.io/master/img/ROC_Curve.PNG)
 
 
 
@@ -172,7 +173,7 @@ sn.heatmap(confusion_matrix_df, annot=True)
 
 
 
-#Add Image Here
+![Confusion Matrix](https://raw.githubusercontent.com/joekrinke15/JoeKrinke15.github.io/master/img/ConfusionMatrix.PNG)
 
 
 The random forest model performed fairly well overall, with a test set accuracy of 78 % and AUC of .827. This performance isn't terrible given the classes were equally balanced. However, the baseline logistic regression model was able to achieve a higher AUC of .897. This is likely due to the fact that there is a lot of noise in the image data. Some factors that could have contributed to this noise were that the images were resized from different original sizes, images were taken on patients who "filled up" the x-ray machine differently, and images were taken on people of different genders. Potential improvements to the modeling could include more complex image processing and feature extraction. Images could be cropped to eliminate blank space, features could be generated from 'influential' areas (in the center of the lungs). or one could apply techniques like PCA or Canny Edge Detection to pre-process the data. 
