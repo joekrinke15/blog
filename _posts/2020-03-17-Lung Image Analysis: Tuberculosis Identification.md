@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Identifying Tuberculosis Using Lung Images
