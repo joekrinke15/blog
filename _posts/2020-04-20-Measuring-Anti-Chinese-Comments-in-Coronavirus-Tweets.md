@@ -19,11 +19,12 @@ China-related tweets appeared to have higher levels of insults, threats, toxicit
 <p float="left">
 <img src="https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/Threat.png?raw=true"  width="200" height="500"/>
 <img src="https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/identity%20attack.png?raw=true"  width="200" height="500"/>
+</p>
+
+<p float="left">
 <img src="https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/Tweet%20Toxicity%20(2).png?raw=true"  width="200" height="500"/>
 <img src="https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/insult.png?raw=true"  width="200" height="500"/>
 </p>
 
 Interestingly, individuals with no profile pictures also tweeted content that was much more negative and insulting- it is possible that such users may be bots created to manufacture political discord. We may try applying existing bot-detection algorithms to test this theory. 
-|![No Profile](https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/China%20Profile%20TF.png?raw=true)| 
-|:--:| 
-| *Comment Classifications and Profile Picture Status* |
+![No Profile](https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/China%20Profile%20TF.png?raw=true)
