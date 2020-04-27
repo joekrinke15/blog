@@ -17,10 +17,11 @@ After we collected the tweets, our next step was to determine how to measure the
 
 China-related tweets appeared to have higher levels of insults, threats, toxicity, and identity attacks, confirming that Chinese people may be experiencing racism as a result of the Coronavirus. 
 
+<img src="https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/Threat.png?raw=true"  width="120" height="120">
+<img src="https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/identity%20attack.png?raw=true"  width="120" height="120">
+<img src="https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/Tweet%20Toxicity%20(2).png"  width="120" height="120">
+<img src="https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/insult.png?raw=true"  width="120" height="120">
 
-![Threat](https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/Threat.png?raw=true){:height="36px" width="36px"}|![Identity Attacks](https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/identity%20attack.png?raw=true){:height="36px" width="36px"}
-:-------------------------:|:-------------------------:
-![Toxicity](https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/Tweet%20Toxicity%20(2).png){:height="36px" width="36px"} |  ![Insults](https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/insult.png?raw=true){:height="36px" width="36px"}
 Interestingly, individuals with no profile pictures also tweeted content that was much more negative and insulting- it is possible that such users may be bots created to manufacture political discord. We may try applying existing bot-detection algorithms to test this theory. 
 | ![No Profile](https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/China%20Profile%20TF.png?raw=true) | 
 |:--:| 
