@@ -16,12 +16,12 @@ After we collected the tweets, our next step was to determine how to measure the
 
 China-related tweets appeared to have higher levels of insults, threats, toxicity, and identity attacks, confirming that Chinese people may be experiencing racism as a result of the Coronavirus. 
 
-<p float="left">
+<p float="center">
 <img src="https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/Threat.png?raw=true"  width="200" height="500"/>
 <img src="https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/identity%20attack.png?raw=true"  width="200" height="500"/>
 </p>
 
-<p float="left">
+<p float="center">
 <img src="https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/Tweet%20Toxicity%20(2).png?raw=true"  width="200" height="500"/>
 <img src="https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/insult.png?raw=true"  width="200" height="500"/>
 </p>
