@@ -3,8 +3,7 @@ layout: post
 title: Measuring Anti-Chinese Comments in Coronavirus Tweets
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/1200px-Flag_of_the_People%27s_Republic_of_China.svg.png
 ---
-# Measuring Anti-Chinese Comments in Coronavirus Tweets
-
+# Can Anti-Chinese Sentiment be Detected Using Twitter?
 Covid-19 has spread across the globe, infecting milions of people and fundamentally changing how we work and interact with others. With the proliferation of this disease also came an unexpected byproduct; anti-Chinese racism in the United States.
 ![NYT Headline](https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/Racism.PNG?raw=true)
 Since the first cases of the virus were in Wuhan, a number of individuals have blamed China and its government for the pandemic, going as far as to attack, harrass, and curse Chinese nationals and even Chinese-Americans. These flames of prejudice, some would argue, have been stoked by the U.S. president's rhetoric; he famously called Covid-19 the "Chinese Virus."
