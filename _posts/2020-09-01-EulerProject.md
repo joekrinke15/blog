@@ -50,7 +50,7 @@ Not all numbers produce palindromes so quickly. For example,
 
 That is, 349 took three iterations to arrive at a palindrome.
 
-Mathemeticians theorize that some numbers never produce a palindrome through this repetition of reversal and addition. Numbers with this property are called Lychrel numbers.  The vast majority of numbers that eventually become a palindrome take less than 50 iterations of reversal and addition to do so. For this problem, I will be determining how many numbers under 10000 are Lychrel numbers. This calculation will assume that a number is a Lychrel number if it doesn't become a palindrome within 50 iterations.
+Mathemeticians theorize that some numbers never produce a palindrome through this repetition of reversal and addition. Numbers with this property are called Lychrel numbers.  The vast majority of numbers that eventually become a palindrome take less than 50 iterations of reversal and addition to do so. For this problem, I determined how many numbers under 10000 are Lychrel numbers. This calculation assumed that a number is a Lychrel number if it doesn't become a palindrome within 50 iterations.
 
 I began by creating functions to sum a number and its reverse.
 ```Python3
@@ -94,3 +94,38 @@ print("The number of Lychrel numbers from 1 to 10000 is {}.".format(sum(lychrel_
 ```
 
 # Dice Game
+The last problem I chose to solve was a bit trickier than the previous ones. The problem is as follows: 
+
+Peter has nine four-sided dice, each with faces numbered 1, 2, 3, 4. 
+Colin has six six-sided dice, each with faces numbered 1, 2, 3, 4, 5, 6.
+
+Peter and Colin roll their dice and compare sums: the highest sum wins. The result is a draw if the sums are equal. 
+What is the probability that Peter beats Colin? Give your answer accurate to 7 decimal places.
+
+My initial approach to solve this problem was a Monte Carlo simulation, that is, I would simulate the game being played over and over again and estimate Peter's win rate. The more simulations I run the more accurate (in theory) the estimate would be. I began this approach by creating a function that simulates each player's throws; the function "rolls the dice" for each player and compares the sum of the dice to produce the winner. 
+```Python3
+#A function to simulate throwing the dice once.
+def play_game():
+    #Calculate the scores for each player
+    pete_score = np.sum(np.random.randint(low = 1, high = 5, size = 9))
+    colin_score = np.sum(np.random.randint(low = 1, high = 7, size = 6))
+    #Compare scores to see who wins
+    if pete_score > colin_score:
+        winner = 1.0
+    else:
+        winner = 0.0
+    return(winner)
+
+```
+Now that I could model one throw I could throw the dice many times to try to estimate Peter's true win percentage. I decided to run 1000000 simulations of the game and see what the result was. This gave an estimate of Peter's win rate being 0.5739220. I was happy with this answer and submitted it to the Euler Project for verification. Unfortunately, however, the answer I produced was only accurate to the first 3 decimal places. I needed to find a more exact way to estimate the win rate. 
+
+```Python3
+#Run 1000000 simulations of the game. 
+winners = []
+for i in range(1000000):
+    winner = play_game()
+    winners.append(winner)
+    
+#Print the result. It's accurate to the first ~3 decimal places.
+print("Pyrimidal Pete's win probability is about {}.".format(np.mean(winners)))
+```
