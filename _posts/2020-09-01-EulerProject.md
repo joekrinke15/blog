@@ -8,7 +8,7 @@ The Euler project is a website that contains computational problems that are int
 # Fibonacci Sequence
 The Fibonacci sequence is a sequence of numbers where each number is defined as being the sum of the previous two numbers, starting from 0 and 1. 
 
-The sequence begins: 0, 1, 1, 2, 3, 5..... and continues infintely. 
+The sequence begins: 0, 1, 1, 2, 3, 5..... and continues infinitely. 
 This sequence is often found in both nature and mathematics, so much research has been done on its properties and potential scientific applications. The problem I am personally going to examine is the following; how far in the Fibonacci sequence do you need to go before finding a number that exceeds 1000 digits? 
 
 I began by creating a Python generator that produces the values of the Fibonacci sequence. This allows me to iterate over the generator and continually produce consecutive values. 
