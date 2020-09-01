@@ -135,5 +135,5 @@ for i in range(1000000):
     winners.append(winner)
     
 #Print the result. It's accurate to the first ~3 decimal places.
-print("Pyrimidal Pete's win probability is about {}.".format(np.mean(winners)))
+print("Pete's win probability is about {}.".format(np.mean(winners)))
 ```
