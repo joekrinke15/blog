@@ -3,7 +3,7 @@ layout: post
 title: The Euler Project
 image: https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/Coding.jpg?raw=true
 ---
-The Euler project is a website that contains computational problems that are intended to be solved by computer programs. In this post I'll be examining a few problems I found interesting and detail my solutions. 
+The Euler project is a website that contains problems that are intended to be solved by computer programs. In this post I'll be examining a few problems I found interesting and detail my solutions. 
 
 # Fibonacci Sequence
 The Fibonacci sequence is a sequence of numbers where each number is defined as being the sum of the previous two numbers, starting from 0 and 1. 
@@ -54,7 +54,7 @@ Not all numbers produce palindromes so quickly. For example,
 
 That is, 349 took three iterations to arrive at a palindrome.
 
-Mathemeticians theorize that some numbers never produce a palindrome through this repetition of reversal and addition. Numbers with this property are called Lychrel numbers.  The vast majority of numbers that eventually become a palindrome take less than 50 iterations of reversal and addition to do so. For this problem, I determined how many numbers under 10000 are Lychrel numbers. This calculation assumed that a number is a Lychrel number if it doesn't become a palindrome within 50 iterations.
+Mathematicians theorize that some numbers never produce a palindrome through this repetition of reversal and addition. Numbers with this property are called Lychrel numbers.  The vast majority of numbers that eventually become a palindrome take less than 50 iterations of reversal and addition to do so. For this problem, I determined how many numbers under 10000 are Lychrel numbers. This calculation assumed that a number is a Lychrel number if it doesn't become a palindrome within 50 iterations.
 
 I began by creating functions to sum a number and its reverse.
 ```Python3
@@ -110,7 +110,7 @@ What is the probability that Peter beats Colin? Give your answer accurate to 7 d
 </p>
 
 
-My initial approach to solve this problem was a Monte Carlo simulation, that is, I would simulate the game being played over and over again and estimate Peter's win rate. The more simulations I run the more accurate (in theory) the estimate would be. I began this approach by creating a function that simulates each player's throws; the function "rolls the dice" for each player and compares the sum of the dice to produce the winner. 
+My initial approach to solve this problem was a Monte Carlo simulation, that is, I would simulate the game being played over and over again and estimate Peter's win rate. The more simulations I ran the more accurate (in theory) the estimate would be. I began this approach by creating a function that simulates each player's throws; the function "rolls the dice" for each player and compares the sum of the dice to produce the winner. 
 ```Python3
 #A function to simulate throwing the dice once.
 def play_game():
