@@ -7,9 +7,13 @@ The Euler project is a website that contains computational problems that are int
 
 # Fibonacci Sequence
 The Fibonacci sequence is a sequence of numbers where each number is defined as being the sum of the previous two numbers, starting from 0 and 1. 
-
 The sequence begins: 0, 1, 1, 2, 3, 5..... and continues infinitely. 
-This sequence is often found in both nature and mathematics, so much research has been done on its properties and potential scientific applications. The problem I am personally going to examine is the following; how far in the Fibonacci sequence do you need to go before finding a number that exceeds 1000 digits? 
+This sequence is often found in both nature and mathematics, so much research has been done on its properties and potential scientific applications. 
+<p align="center">
+  <img src="https://mistrzwitold.com/wp-content/uploads/2018/10/HOW-NATURE-CREATED-THE-FIBONACCI-SEQUENCE-%E2%80%93-MATH-IN-NATURE.jpg">
+</p>
+
+The problem I am personally going to examine is the following; how far in the Fibonacci sequence do you need to go before finding a number that exceeds 1000 digits? 
 
 I began by creating a Python generator that produces the values of the Fibonacci sequence. This allows me to iterate over the generator and continually produce consecutive values. 
 
@@ -101,6 +105,10 @@ Colin has six six-sided dice, each with faces numbered 1, 2, 3, 4, 5, 6.
 
 Peter and Colin roll their dice and compare sums: the highest sum wins. The result is a draw if the sums are equal. 
 What is the probability that Peter beats Colin? Give your answer accurate to 7 decimal places.
+<p align="center">
+  <img width="600" height="450" src="https://miro.medium.com/max/1200/1*QkbOwDJaAqSj29wpIBAkaw.jpeg">
+</p>
+
 
 My initial approach to solve this problem was a Monte Carlo simulation, that is, I would simulate the game being played over and over again and estimate Peter's win rate. The more simulations I run the more accurate (in theory) the estimate would be. I began this approach by creating a function that simulates each player's throws; the function "rolls the dice" for each player and compares the sum of the dice to produce the winner. 
 ```Python3
