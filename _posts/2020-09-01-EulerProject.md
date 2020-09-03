@@ -140,7 +140,7 @@ print("Pete's win probability is about {}.".format(np.mean(winners)))
 One way to determine the win rate is to explicitly calculate the probability of each sum appearing with a given dice combination. Luckily, I was able to find this formula that can be used to compute the probability of getting a sum of k from rolling n dice with s sides. 
 
 <p align="center">
-<img src=https://raw.githubusercontent.com/joekrinke15/JoeKrinke15.github.io/master/img/Formula.png>
+<img src=https://raw.githubusercontent.com/joekrinke15/JoeKrinke15.github.io/master/img/Formula.PNG>
 </p>
 
 I implemented this formula in the following function.
@@ -181,7 +181,7 @@ def create_matrix(prob1, prob2):
 Here is a heatmap of the probability of each combination of dice rolls. It looks like Peter may win slightly more often than Colin. 
 
 <p align="center">
-<img src= https://raw.githubusercontent.com/joekrinke15/JoeKrinke15.github.io/master/img/heatmap.png>
+<img src= https://raw.githubusercontent.com/joekrinke15/JoeKrinke15.github.io/master/img/heatmap.PNG>
 </p>
 
 Now that I had the probabilities of all possible outcomes, all that was remained was to add up the probabilities associated with Peter winning.I started by writing a function to iterate over the matrix of outcomes and put a value of True wherever Peter won. By multipling these boolean values with the probabilities I was able to produce a matrix that contained only the probabilities that corresponded to Peter's victory. Adding these numbers up produced the final answer: 0.5731440767829801.
