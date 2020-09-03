@@ -165,7 +165,7 @@ def find_probs(s, n):
     return(prob_dict)
 
 ```
-If we assume each player's dice rolls are independent, the chance of that combination of rolls occurring is just the two probabilties multiplied together. The next two functions work together to produce a matrix of the joint probabilities of rolling various sums. 
+If we assume each player's dice rolls are independent, the chance of that combination of rolls occurring is just the two probabilties multiplied together. The next two functions work together to produce a matrix of the joint probabilities of rolling various sums. The first creates two arrays containing the probability of each outcome for both players. The second takes those two arrays and produces a matrix of joint probabilities. 
 
 ```Python3
 #Create an array of outcomes and a list of their associated probabilities of occurance.
@@ -175,9 +175,30 @@ def label_creation(prob_dict):
 #Create a matrix of the product of the probabilities of seperate dice rolls. This will compute the probability of all combinations of their sums.
 def create_matrix(prob1, prob2):
     prob_matrix = np.outer(prob1, prob2)
-    return(prob_matrix
+    return(prob_matrix)
 ```
-Here is a heatmap of the probability of each combination of dice rolls. It looks like Pete may win slightly more often than Colin. 
+Here is a heatmap of the probability of each combination of dice rolls. It looks like Peter may win slightly more often than Colin. 
 <p align="center">
 <img src = https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/heatmap.png?raw=true>
 </p>
+
+Now that I had the probabilites of all possible outcomes all I needed to do was add up the probabilities associated with Peter winning.I started by writing a function to iterate over the matrix of outcomes and put a value of True wherever Peter won. By multipling this boolean matrix with the matrix of joint probabilities I was able to produce a matrix that contained only the probabilties that corresponded to Peter's victory. Adding these numbers up produced the final answer: 0.5731440767829801.
+
+```Python3
+#Compare the possible outcomes to produce a matrix that shows who wins. 
+def win_matrix(outcomes1, outcomes2):
+    d1 = outcomes1.shape[0]
+    d2 = outcomes2.shape[0]
+    win_matrix = np.zeros((d1,d2))
+    for i in range(d1): #Rows
+        for j in range(d2): #Columns
+            if outcomes1[i] > outcomes2[j]: #Compare values
+                win_matrix[i,j] = True
+            else:
+                win_matrix[i,j] = False
+    return(win_matrix)
+                
+#Multiply the wins with the probability of the win occurring and sum them. This produces the overall win rate. 
+def win_prob(win_matrix, prob_matrix):
+    return (np.sum(win_matrix * prob_matrix))
+```
