@@ -140,7 +140,7 @@ print("Pete's win probability is about {}.".format(np.mean(winners)))
 One way to determine the win rate is to explicitly calculate the probability of each sum appearing with a given dice combination. Luckily, I was able to find this formula that can be used to compute the probability of getting a sum of k from rolling n dice with s sides. 
 
 <p align="center">
-  <img src="https://mistrzwitold.com/wp-content/uploads/2018/10/HOW-NATURE-CREATED-THE-FIBONACCI-SEQUENCE-%E2%80%93-MATH-IN-NATURE.jpg">
+  <img src="https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/heatmap.png>
 </p>
 
 I implemented this formula in the following function.
