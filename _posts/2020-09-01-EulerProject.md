@@ -181,7 +181,7 @@ def create_matrix(prob1, prob2):
 Here is a heatmap of the probability of each combination of dice rolls. It looks like Peter may win slightly more often than Colin. 
 
 <p align="center">
-<img src= https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/heatmap.png?raw=true>
+<img src= https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/heatmap.png>
 </p>
 
 Now that I had the probabilities of all possible outcomes, all that was remained was to add up the probabilities associated with Peter winning.I started by writing a function to iterate over the matrix of outcomes and put a value of True wherever Peter won. By multipling these boolean values with the probabilities I was able to produce a matrix that contained only the probabilities that corresponded to Peter's victory. Adding these numbers up produced the final answer: 0.5731440767829801.
