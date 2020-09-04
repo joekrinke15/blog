@@ -125,7 +125,7 @@ def play_game():
     return(winner)
 
 ```
-Now that I could model one throw I could throw the dice many times to try to estimate Peter's true win percentage. I decided to run 1000000 simulations of the game; these simulations gave an estimate of Peter's win rate being 0.5739220. Unfortunately, however, the answer I produced was only accurate to the first 3 decimal places. I needed to find a more exact way to estimate the win rate. 
+Now that I could model one throw I could throw the dice many times to try to estimate Peter's true win percentage. I decided to run 1000000 simulations of the game. 
 
 ```Python3
 #Run 1000000 simulations of the game. 
@@ -137,6 +137,14 @@ for i in range(1000000):
 #Print the result. It's accurate to the first ~3 decimal places.
 print("Pete's win probability is about {}.".format(np.mean(winners)))
 ```
+As you can see below, the model converged rather quickly. These simulations gave an estimate of Peter's win rate being 0.5739220. 
+
+<p align="center">
+  <img width = "490" height = "397" src= "https://raw.githubusercontent.com/joekrinke15/JoeKrinke15.github.io/master/img/MonteCarlo.PNG">
+</p>
+
+Unfortunately, however, the answer I produced was only accurate to the first 3 decimal places. I needed to find a more exact way to estimate the win rate. 
+
 One way to determine the win rate is to explicitly calculate the probability of each sum appearing with a given dice combination. Luckily, I was able to find this formula that can be used to compute the probability of getting a sum of k from rolling n dice with s sides. 
 
 <p align="center">
