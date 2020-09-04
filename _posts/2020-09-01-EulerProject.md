@@ -140,7 +140,7 @@ print("Pete's win probability is about {}.".format(np.mean(winners)))
 As you can see below, the model converged rather quickly. These simulations gave an estimate of Peter's win rate being 0.5739220. 
 
 <p align="center">
-  <img width = "490" height = "397" src= "https://raw.githubusercontent.com/joekrinke15/JoeKrinke15.github.io/master/img/MonteCarlo.PNG">
+  <img width = "490" height = "397" src= "https://raw.githubusercontent.com/joekrinke15/JoeKrinke15.github.io/master/img/MonteCarlo.png">
 </p>
 
 Unfortunately, however, the answer I produced was only accurate to the first 3 decimal places. I needed to find a more exact way to estimate the win rate. 
