@@ -213,3 +213,7 @@ def win_matrix(outcomes1, outcomes2):
 def win_prob(win_matrix, prob_matrix):
     return (np.sum(win_matrix * prob_matrix))
 ```
+# Sources
+Project Euler: https://projecteuler.net/
+
+Dice Formulas: https://mathworld.wolfram.com/Dice.html
