@@ -18,8 +18,10 @@ The problem I am personally going to examine is the following; how far in the Fi
 I began by creating a Python generator that produces the values of the Fibonacci sequence. This allows me to iterate over the generator and continually produce consecutive values. 
 
 ```Python3
-#Create a python generator to yield the values of the Fibonacci sequence.
 def fibonacci():
+"""
+Create a python generator to yield the values of the Fibonacci sequence.
+"""
     n_1, n_2 = 0,1
     while True:
         yield (n_1 + n_2)
@@ -29,11 +31,11 @@ def fibonacci():
 Since I now had a way to create the values in the sequence, all I needed to do was calculate the values and check how many digits each value had. Once the program finds a number with 1000 digits it stops and displays the answer. It ultimately takes 4782 iterations of the Fibonacci sequence to produce a number with at least 1000 digits.
 
 ```Python3
-#Create fibonacci generator and start counting the indices. 
+# Create fibonacci generator and start counting the indices. 
 f = fibonacci()
 index = 1
 
-#Iterate over the generator to produce values until you get to a value with a length of 1000. 
+# Iterate over the generator to produce values until you get to a value with a length of 1000. 
 for x in f:
     index += 1
     length = (int(math.log10(x))+1) #Check the length of the number. 
@@ -58,11 +60,10 @@ Mathematicians theorize that some numbers never produce a palindrome through thi
 
 I began by creating functions to sum a number and its reverse.
 ```Python3
-"""
-Takes a number, converts it to a string and reverses it, then converts it back an int.
-"""
 def reverse(number):
-
+ """
+ Takes a number, converts it to a string and reverses it, then converts it back an int.
+ """
     reversed = int(str(number)[::-1]) 
     return(reversed)
 
@@ -72,7 +73,6 @@ def sum_reverse(number):
 ```
 Next, I had to create a function to check if a given number is a palindrome. This works by reversing the number and checking for equality.
 ```Python3
-"""
 def is_palindrome(number):
 """
 Checks if a number is a palindrome and returns a boolean based on the result.
@@ -84,11 +84,11 @@ Checks if a number is a palindrome and returns a boolean based on the result.
 ```
 The last function repeats the reversal and summation process 50 times and checks if the output of each iteration is a palindrome. 
 ```Python3
+def is_lychrel(number):
 """ 
 Determines if a given number input is a Lychrel number within 50 iterations.
 Returns a boolean value corresponding to Lychrel status. 
 """
-def is_lychrel(number):
     new_num = number
     bool_lychrel = True
     for i in range (50):
@@ -121,11 +121,11 @@ What is the probability that Peter beats Colin? Give your answer accurate to 7 d
 
 My initial approach to solve this problem was a Monte Carlo simulation, that is, I would simulate the game being played over and over again and estimate Peter's win rate. The more simulations I ran the more accurate (in theory) the estimate would be. I began this approach by creating a function that simulates each player's throws; the function "rolls the dice" for each player and compares the sum of the dice to produce the winner. 
 ```Python3
+def play_game():
 """
 Simulates two players throwing dice. One player has 9 dice with sides 1-4 and another has 6 dice with sides 1-6. 
 A boolean value is returned that says if the player with 9 dice (pete/peter) wins.
-
-def play_game():
+"""
     #Calculate the scores for each player
     pete_score = np.sum(np.random.randint(low = 1, high = 5, size = 9))
     colin_score = np.sum(np.random.randint(low = 1, high = 7, size = 6))
@@ -195,8 +195,10 @@ Create a dictionary of sums k with their associated probabilities for n dice wit
 If we assume each player's dice rolls are independent, the chance of that combination of rolls occurring is just the two probabilties multiplied together. The next two functions work together to produce a matrix of the joint probabilities of rolling various sums. The first portion creates two arrays containing the probability of each outcome for both players. The second takes those two arrays and uses them to produce a matrix of joint probabilities. 
 
 ```Python3
-#Create an array of outcomes and a list of their associated probabilities of occurance.
 def label_creation(prob_dict):
+"""
+Create an array of outcomes and a list of their associated probabilities of occurance.
+"""
     return np.array(list(prob_dict.keys())), np.array(list(prob_dict.values()))
  
 Create a matrix of the product of the probabilities of seperate dice rolls. This will compute the probability of all combinations of their sums.
