@@ -58,8 +58,11 @@ Mathematicians theorize that some numbers never produce a palindrome through thi
 
 I began by creating functions to sum a number and its reverse.
 ```Python3
-#Define function to reverse a number.
+"""
+Takes a number, converts it to a string and reverses it, then converts it back an int.
+"""
 def reverse(number):
+
     reversed = int(str(number)[::-1]) 
     return(reversed)
 
@@ -69,8 +72,11 @@ def sum_reverse(number):
 ```
 Next, I had to create a function to check if a given number is a palindrome. This works by reversing the number and checking for equality.
 ```Python3
-#Define a function to check if a number is a palindrome. 
+"""
 def is_palindrome(number):
+"""
+Checks if a number is a palindrome and returns a boolean based on the result.
+"""
     if (reverse(number) == number):
         return True
     else:
@@ -78,7 +84,10 @@ def is_palindrome(number):
 ```
 The last function repeats the reversal and summation process 50 times and checks if the output of each iteration is a palindrome. 
 ```Python3
-#Define a function to check if a number is a lychrel value.
+""" 
+Determines if a given number input is a Lychrel number within 50 iterations.
+Returns a boolean value corresponding to Lychrel status. 
+"""
 def is_lychrel(number):
     new_num = number
     bool_lychrel = True
@@ -112,7 +121,10 @@ What is the probability that Peter beats Colin? Give your answer accurate to 7 d
 
 My initial approach to solve this problem was a Monte Carlo simulation, that is, I would simulate the game being played over and over again and estimate Peter's win rate. The more simulations I ran the more accurate (in theory) the estimate would be. I began this approach by creating a function that simulates each player's throws; the function "rolls the dice" for each player and compares the sum of the dice to produce the winner. 
 ```Python3
-#A function to simulate throwing the dice once.
+"""
+Simulates two players throwing dice. One player has 9 dice with sides 1-4 and another has 6 dice with sides 1-6. 
+A boolean value is returned that says if the player with 9 dice (pete/peter) wins.
+
 def play_game():
     #Calculate the scores for each player
     pete_score = np.sum(np.random.randint(low = 1, high = 5, size = 9))
@@ -155,8 +167,12 @@ One way to determine the win rate is to explicitly calculate the probability of 
 I implemented this formula in the following function.
 
 ```Python3
-#Calculate the probability of a sum k occurring given n dice with sides n.
+
 def prob_outcome(k, s, n):
+"""
+Calculate the probability of a sum k occurring given n dice with sides n.
+Returns a float value ranging from 0-1. 
+"""
     prob = 0 
     possible_vals = math.pow(s,n)
     top_val = math.floor((k - n)/s)
@@ -166,9 +182,10 @@ def prob_outcome(k, s, n):
 ```
 This second function uses the previous one to generate pairs of sums and their associated probabilities. 
 ```Python3
-    
-#Create a dictionary of sums k with their associated probabilities for n dice with s sides.
 def find_probs(s, n): 
+"""
+Create a dictionary of sums k with their associated probabilities for n dice with s sides.
+"""
     prob_dict = {}
     for i in range(n, s * n + 1):
         prob_dict[i] = prob_outcome(i, s, n)
@@ -182,8 +199,12 @@ If we assume each player's dice rolls are independent, the chance of that combin
 def label_creation(prob_dict):
     return np.array(list(prob_dict.keys())), np.array(list(prob_dict.values()))
  
-#Create a matrix of the product of the probabilities of seperate dice rolls. This will compute the probability of all combinations of their sums.
+Create a matrix of the product of the probabilities of seperate dice rolls. This will compute the probability of all combinations of their sums.
 def create_matrix(prob1, prob2):
+"""
+Create a matrix of the product of the probabilities of seperate dice rolls. 
+This will compute the probability of all combinations of their sums.
+"""
     prob_matrix = np.outer(prob1, prob2)
     return(prob_matrix)
 ```
@@ -196,8 +217,10 @@ Here is a heatmap of the probability of each combination of dice rolls. It looks
 Now that I had the probabilities of all possible outcomes, all that was remained was to add up the probabilities associated with Peter winning.I started by writing a function to iterate over the matrix of outcomes and put a value of True wherever Peter won. By multipling these boolean values with the probabilities I was able to produce a matrix that contained only the probabilities that corresponded to Peter's victory. Adding these numbers up produced the final answer: 0.5731440767829801.
 
 ```Python3
-#Compare the possible outcomes to produce a matrix that shows who wins. 
 def win_matrix(outcomes1, outcomes2):
+"""
+Compare the possible outcomes in each row and column to produce a matrix that shows who wins. 
+"""
     d1 = outcomes1.shape[0]
     d2 = outcomes2.shape[0]
     win_matrix = np.zeros((d1,d2))
@@ -209,8 +232,11 @@ def win_matrix(outcomes1, outcomes2):
                 win_matrix[i,j] = False
     return(win_matrix)
                 
-#Multiply the wins with the probability of the win occurring and sum them. This produces the overall win rate. 
 def win_prob(win_matrix, prob_matrix):
+"""
+Multiply the wins with the probability of the win occurring and sum them. 
+This produces the overall win rate. 
+"""
     return (np.sum(win_matrix * prob_matrix))
 ```
 # Sources
