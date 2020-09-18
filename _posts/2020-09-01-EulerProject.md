@@ -111,7 +111,7 @@ Returns a boolean value corresponding to Lychrel status.
     Parameters:
         number (int): An integer.
     Returns:
-        (boolean): Boolean indicated if the number is a Lychrel number.
+        bool_lychrel (boolean): Boolean indicated if the number is a Lychrel number.
 """
     new_num = number
     bool_lychrel = True
