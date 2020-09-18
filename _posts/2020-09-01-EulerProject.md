@@ -21,6 +21,8 @@ I began by creating a Python generator that produces the values of the Fibonacci
 def fibonacci():
 """
 Create a python generator to yield the values of the Fibonacci sequence.
+    Returns:
+        (int): A given integer value of the Fibonacci sequence.
 """
     n_1, n_2 = 0,1
     while True:
@@ -63,12 +65,24 @@ I began by creating functions to sum a number and its reverse.
 def reverse(number):
  """
  Takes a number, converts it to a string and reverses it, then converts it back an int.
+ 
+     Parameters:
+         number (int): An integer.
+     
+     Returns:
+         (int): Integer of the reverse of number.
  """
     reversed = int(str(number)[::-1]) 
     return(reversed)
 
-#Define function to sum a number and its reverse. 
 def sum_reverse(number): 
+"""
+Sums an integer and its reverse.
+    Parameters:
+        number (int): An integer.
+    Returns:
+        (int): Integer containing the sum of a number and its reverse.
+"""
     return(number + reverse(number))
 ```
 Next, I had to create a function to check if a given number is a palindrome. This works by reversing the number and checking for equality.
@@ -76,6 +90,11 @@ Next, I had to create a function to check if a given number is a palindrome. Thi
 def is_palindrome(number):
 """
 Checks if a number is a palindrome and returns a boolean based on the result.
+
+    Parameters:
+        number (int): An integer.
+    Returns:
+        (boolean): Boolean indicating if the number is a palindrome. 
 """
     if (reverse(number) == number):
         return True
@@ -88,6 +107,11 @@ def is_lychrel(number):
 """ 
 Determines if a given number input is a Lychrel number within 50 iterations.
 Returns a boolean value corresponding to Lychrel status. 
+
+    Parameters:
+        number (int): An integer.
+    Returns:
+        (boolean): Boolean indicated if the number is a Lychrel number.
 """
     new_num = number
     bool_lychrel = True
@@ -124,7 +148,10 @@ My initial approach to solve this problem was a Monte Carlo simulation, that is,
 def play_game():
 """
 Simulates two players throwing dice. One player has 9 dice with sides 1-4 and another has 6 dice with sides 1-6. 
-A boolean value is returned that says if the player with 9 dice (pete/peter) wins.
+A value is returned that says if the player with 9 dice (pete/peter) wins.
+
+    Returns:
+        winner (int): An integer 1 or 0 indicating whether or not the first player has won. 1 indicates victory. 
 """
     #Calculate the scores for each player
     pete_score = np.sum(np.random.randint(low = 1, high = 5, size = 9))
@@ -170,8 +197,15 @@ I implemented this formula in the following function.
 
 def prob_outcome(k, s, n):
 """
-Calculate the probability of a sum k occurring given n dice with sides n.
+Calculate the probability of a sum k occurring given n dice with s sides.
 Returns a float value ranging from 0-1. 
+
+    Parameters:
+        k (int): The integer sum you want to find the probability of.
+        s (int): An integer corresponding to the number of sides on each die.
+        n (int): The integer number of total dice.
+    Returns:
+        (float) : The probability of the sum k occuring gievn n dice with s sides. 
 """
     prob = 0 
     possible_vals = math.pow(s,n)
@@ -185,6 +219,12 @@ This second function uses the previous one to generate pairs of sums and their a
 def find_probs(s, n): 
 """
 Create a dictionary of sums k with their associated probabilities for n dice with s sides.
+
+    Parameters:
+        s (int): The number of sides on each die.
+        n (int): The number of dice.
+    Returns:
+        prob_dict (dict): A dictionary containing pairs of sums (k) and their associated probabilites of occurrence. 
 """
     prob_dict = {}
     for i in range(n, s * n + 1):
@@ -197,7 +237,13 @@ If we assume each player's dice rolls are independent, the chance of that combin
 ```Python3
 def label_creation(prob_dict):
 """
-Create an array of outcomes and a list of their associated probabilities of occurance.
+Create an array of outcomes and a list of their associated probabilities of occurrence.
+
+    Parameters:
+        prob_dict (dict): An dictionary with key value pairs of sums and their probabilities of occurrence. 
+    Returns:
+        (array): An array containing probabilities.
+        (array): An array containing sums. 
 """
     return np.array(list(prob_dict.keys())), np.array(list(prob_dict.values()))
  
@@ -206,6 +252,12 @@ def create_matrix(prob1, prob2):
 """
 Create a matrix of the product of the probabilities of seperate dice rolls. 
 This will compute the probability of all combinations of their sums.
+
+    Parameters:
+        prob1 (array): A numpy array containing the probability of each roll for player 1.
+        prob2 (array): A numpy array containing the probability of each roll for player 2.
+    Returns:
+        prob_matrix (array): A matrix containing the joint probabilities of each roll combination. 
 """
     prob_matrix = np.outer(prob1, prob2)
     return(prob_matrix)
@@ -221,7 +273,12 @@ Now that I had the probabilities of all possible outcomes, all that was remained
 ```Python3
 def win_matrix(outcomes1, outcomes2):
 """
-Compare the possible outcomes in each row and column to produce a matrix that shows who wins. 
+Compare the possible outcomes in each row and column to produce a matrix that shows who wins.
+    Parameters:
+        outcomes1 (array): An array containing the possible sums for the first player.
+        outcomes2 (array): An array containing the possible sums for the second player. 
+    Returns:
+        win_matrix (arary): An array filled with boolean values indicating if a given roll combination is a win for player 1. 
 """
     d1 = outcomes1.shape[0]
     d2 = outcomes2.shape[0]
@@ -238,6 +295,11 @@ def win_prob(win_matrix, prob_matrix):
 """
 Multiply the wins with the probability of the win occurring and sum them. 
 This produces the overall win rate. 
+    Parameters:
+        win_matrix (array): A boolean array showing if each roll is a win for player 1.
+        prob_matrix (array): An array containing the joint probabilities of each pair of rolls.
+    Returns:
+        (float): The proportion of the time that player one wins. 
 """
     return (np.sum(win_matrix * prob_matrix))
 ```
