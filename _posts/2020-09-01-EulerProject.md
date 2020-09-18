@@ -239,7 +239,6 @@ Create an array of outcomes and a list of their associated probabilities of occu
 """
     return np.array(list(prob_dict.keys())), np.array(list(prob_dict.values()))
  
-Create a matrix of the product of the probabilities of seperate dice rolls. This will compute the probability of all combinations of their sums.
 def create_matrix(prob1, prob2):
 """
 Create a matrix of the product of the probabilities of seperate dice rolls. 
