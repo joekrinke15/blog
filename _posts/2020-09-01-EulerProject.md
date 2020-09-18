@@ -67,7 +67,6 @@ def reverse(number):
  Takes a number, converts it to a string and reverses it, then converts it back an int.
      Parameters:
          number (int): An integer.
-     
      Returns:
          (int): Integer of the reverse of number.
  """
