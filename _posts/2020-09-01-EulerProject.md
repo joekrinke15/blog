@@ -65,7 +65,6 @@ I began by creating functions to sum a number and its reverse.
 def reverse(number):
  """
  Takes a number, converts it to a string and reverses it, then converts it back an int.
- 
      Parameters:
          number (int): An integer.
      
@@ -90,7 +89,6 @@ Next, I had to create a function to check if a given number is a palindrome. Thi
 def is_palindrome(number):
 """
 Checks if a number is a palindrome and returns a boolean based on the result.
-
     Parameters:
         number (int): An integer.
     Returns:
@@ -107,7 +105,6 @@ def is_lychrel(number):
 """ 
 Determines if a given number input is a Lychrel number within 50 iterations.
 Returns a boolean value corresponding to Lychrel status. 
-
     Parameters:
         number (int): An integer.
     Returns:
@@ -149,7 +146,6 @@ def play_game():
 """
 Simulates two players throwing dice. One player has 9 dice with sides 1-4 and another has 6 dice with sides 1-6. 
 A value is returned that says if the player with 9 dice (pete/peter) wins.
-
     Returns:
         winner (int): An integer 1 or 0 indicating whether or not the first player has won. 1 indicates victory. 
 """
@@ -199,7 +195,6 @@ def prob_outcome(k, s, n):
 """
 Calculate the probability of a sum k occurring given n dice with s sides.
 Returns a float value ranging from 0-1. 
-
     Parameters:
         k (int): The integer sum you want to find the probability of.
         s (int): An integer corresponding to the number of sides on each die.
@@ -219,7 +214,6 @@ This second function uses the previous one to generate pairs of sums and their a
 def find_probs(s, n): 
 """
 Create a dictionary of sums k with their associated probabilities for n dice with s sides.
-
     Parameters:
         s (int): The number of sides on each die.
         n (int): The number of dice.
@@ -238,7 +232,6 @@ If we assume each player's dice rolls are independent, the chance of that combin
 def label_creation(prob_dict):
 """
 Create an array of outcomes and a list of their associated probabilities of occurrence.
-
     Parameters:
         prob_dict (dict): An dictionary with key value pairs of sums and their probabilities of occurrence. 
     Returns:
@@ -252,7 +245,6 @@ def create_matrix(prob1, prob2):
 """
 Create a matrix of the product of the probabilities of seperate dice rolls. 
 This will compute the probability of all combinations of their sums.
-
     Parameters:
         prob1 (array): A numpy array containing the probability of each roll for player 1.
         prob2 (array): A numpy array containing the probability of each roll for player 2.
