@@ -199,7 +199,7 @@ Returns a float value ranging from 0-1.
         s (int): An integer corresponding to the number of sides on each die.
         n (int): The integer number of total dice.
     Returns:
-        (float) : The probability of the sum k occuring gievn n dice with s sides. 
+        (float) : The probability of the sum k occuring given n dice with s sides. 
 """
     prob = 0 
     possible_vals = math.pow(s,n)
