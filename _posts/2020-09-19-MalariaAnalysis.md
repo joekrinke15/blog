@@ -1,7 +1,5 @@
 ---
 layout: post
-title: Predicting Abnormal Heart Perfusion
-image: https://www.hopkinsmedicine.org/-/media/images/health/2_-treatment/cardiovascular/getimage2.ashx?h=327&la=en&mh=360&mw=520&w=520&hash=D28C9D2D041DFFBC058C14BBB47A0EEE4D4A18E0
 ---
 
 <!DOCTYPE html>
