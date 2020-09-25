@@ -5,7 +5,7 @@ image: https://developer.spotify.com/assets/branding-guidelines/icon3@2x.png
 ---
 
 
-#Post under development!
+# Post under development!
 
 The first step in getting this data into a database is normalizing it. Normalization makes the database more efficient and flexible by reducing the amount of redundant data. The database is already in first normal form, as there are no columns that contain multiple data elements; the next step is to determine how to get it into third normal form. Third normal form is when every non-prime attribute is non-transitively dependent on every primary key. This sounds a bit jargony, I know, but an example may help clarify things.
 
