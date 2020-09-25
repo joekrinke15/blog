@@ -15,7 +15,7 @@ A primary key is a value that is unique for each record in the database. In the 
 
 For example, the track album name is transitively dependent on the track album id; knowing the id of the track means you *KNOW* the value of the track album id which, in turn, means you *KNOW* the name of the album. The goal is to have the only column in a table that allows you to *KNOW* another column's value to be the primary key. We need to break the table up into smaller tables to fix this issue. Here's the final structure of the database.
 
-<p align = 'center>
+<p align = 'center'>
   
 | Table Name  | Contents    |
 | ----------- | ----------- |
