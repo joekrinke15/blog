@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Creating a Spotify Database
+title: A Spotify Song Database
 image: https://developer.spotify.com/assets/branding-guidelines/icon3@2x.png
 ---
 
 
-# Post under development!
+# Creating a Database From Scratch
 
-Data scientists, business analysts, and other data-focused professionals access SQL databases every day. However, we're often so used to queries just working that we don't stop to consider what goes into the creation of a database. Understanding how information is typically stored can allow you to more quickly understand a database's structure and help you write more efficient queries. In this post, I'll be taking song [data](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-21/readme.md) collected using the [spotifyr](https://github.com/charlie86/spotifyr) package and creating a SQLite database. 
+Data scientists, business analysts, and other data-focused professionals access SQL databases every day. However, we're often so used to queries just working that we don't stop to consider what goes into the creation of a database. Understanding how information is typically stored can allow you to more quickly understand a database's structure and help you write more efficient queries. In this post, I'll be taking song [data](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-21/readme.md) collected using the [spotifyr](https://github.com/charlie86/spotifyr) package and creating a SQLite database. This dataset contains information on a song such as its popularity, danceability, and appearances on playlists.
 
 <p align="center">
 <img src ='https://miro.medium.com/proxy/0*dFLgSGmtLC07YQ-L.jpeg'/>
@@ -26,7 +26,9 @@ For example, the track album name is transitively dependent on the track album I
 
 
 
-The goal is for the primary key to be the only information in a table that allows you to determine the other attributes of the record. We need to break the table up into smaller tables to fix this issue- here's an overview of the end result: 
+The goal is for the primary key to be the only information in a table that allows you to determine the other attributes of the record. We need to break the table up into smaller tables to fix this issue. I used the SQLite3 library to convert the data from a dataframe to individual tables in a database. 
+
+Here's an overview of the end result: 
 
 <center>
 <table class="tg">
@@ -72,3 +74,45 @@ The goal is for the primary key to be the only information in a table that allow
 </tbody>
 </table>
 </center>
+
+# Testing the Database
+
+Now that we have our database we can start to explore song trends. One of the pieces of information Spotify records for each song is its "instrumentalness" - how likely a song is to be purely instrumental. Songs that have instrumentalness values of over .5 are typically seen as being instrumental. Let's see which playlist has the highest number of instrumental songs. I limited the ouput to 10 rows to make it easier to see, as there were 256 playlists that had at least one instrumental song. 
+
+```python3
+%%sql 
+SELECT PlaylistName, NumberInstrumentals
+FROM (SELECT COUNT(DISTINCT(tracks.track_id)) as NumberInstrumentals, playlist.playlist_name as PlaylistName
+      FROM tracks
+      JOIN track_playlist ON track_playlist.track_id = tracks.track_id
+      JOIN track_name ON track_name.track_id = tracks.track_id
+      JOIN track_artist ON track_artist.track_id = tracks.track_id
+      JOIN playlist ON playlist.playlist_id = track_playlist.playlist_id
+      WHERE tracks.instrumentalness >.50
+      GROUP BY playlist.playlist_name
+     )
+WHERE NumberInstrumentals > 0
+ORDER BY NumberInstrumentals DESC
+LIMIT 10
+
+```
+<p align="center">
+<img src ='https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/NumberInstrumentals.PNG?raw=true'/>
+  <em>Playlists Containing the Most Instrumental Songs</em>
+</p>
+
+We can also take a look at which genres of music are the most danceable. 
+```python3
+%%sql
+SELECT AVG(tracks.danceability) as Danceability, playlist.playlist_genre as Genre
+FROM tracks
+JOIN playlist ON playlist.playlist_id = track_playlist.playlist_id
+JOIN track_playlist ON track_playlist.track_id = tracks.track_id
+GROUP BY playlist.playlist_genre
+ORDER by AVG(tracks.danceability) DESC
+```
+<p align="center">
+<img src ='https://raw.githubusercontent.com/joekrinke15/JoeKrinke15.github.io/master/img/Danceability.PNG'/>
+<em>Genres by Danceability</em>
+</p>
+Surprisingly (to me at least) it turns out that rap is the most danceable genre on average. I was thinking that pop or maybe EDM would come out on top. In the future I may look into the interaction between danceability and other factors such as tempo, energy, and loudness. It may be that there is another underlying factor causing this result. 
