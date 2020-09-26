@@ -111,8 +111,11 @@ JOIN track_playlist ON track_playlist.track_id = tracks.track_id
 GROUP BY playlist.playlist_genre
 ORDER by AVG(tracks.danceability) DESC
 ```
+
 <p align="center">
 <img src ='https://raw.githubusercontent.com/joekrinke15/JoeKrinke15.github.io/master/img/Danceability.PNG'/>
+<br>
 <em>Genres by Danceability</em>
 </p>
+
 Surprisingly (to me at least) it turns out that rap is the most danceable genre on average. I was thinking that pop or maybe EDM would come out on top. In the future I may look into the interaction between danceability and other factors such as tempo, energy, and loudness. It may be that there is another underlying factor causing this result. 
