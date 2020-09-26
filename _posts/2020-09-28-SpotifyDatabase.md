@@ -21,18 +21,54 @@ For example, the track album name is transitively dependent on the track album I
 
 <p align="center">
 <img src ='https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/albuminfo.PNG?raw=true'/>
+  <em>An Example of Transitive Dependence</em>
 </p>
 
-The goal is for the primary key to be the only information in a table that allows you to determine the other attributes of the record. We need to break the table up into smaller tables to fix this issue. Here's an overview of the new set of tables and their contents. 
 
-  
-| Table Name  | Contents    |
-| ----------- | ----------- |
-| tracks       | Track ID and Song Characteristics|
-| album_name  | Album Name and Album ID|
-| album release | Album ID and Release Date|
-| playlist  | Playlist ID and Playlist Characteristics|
-| track_playlist | Track ID and Playlist ID |
-| track_name | Track ID and Track Name|
-| track_artist | Track ID and Artist Name|
-| track_album | Track ID Album ID|
+
+The goal is for the primary key to be the only information in a table that allows you to determine the other attributes of the record. We need to break the table up into smaller tables to fix this issue- here's an overview of the end result: 
+
+<center>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">Table Name</th>
+    <th class="tg-0pky">Contents</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">tracks</td>
+    <td class="tg-0pky">Track ID and Song Characteristics</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">album_name</td>
+    <td class="tg-0pky">Album Name and Album ID</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">album_release</td>
+    <td class="tg-0pky">Album ID and Release Date</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">playlist</td>
+    <td class="tg-0lax">Playlist ID and Playlist Characteristics</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">track_playlist</td>
+    <td class="tg-0lax">Track ID and Playlist ID</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">track_name</td>
+    <td class="tg-0lax">Track ID and Track Name</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">track_artist</td>
+    <td class="tg-0lax">Track ID and Artist Name</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">track_album</td>
+    <td class="tg-0lax">Track ID and Album ID</td>
+  </tr>
+</tbody>
+</table>
+</center>
