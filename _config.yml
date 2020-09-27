@@ -4,7 +4,7 @@
 title: Joe Krinke
 
 # Short description of your site
-description: Data Scientist
+description: Statistician | Consultant | Data Scientist
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -20,7 +20,7 @@ url: "https://joekrinke15.github.io"
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
+  About Me: "https://joekrinke15.github.io/"
   Projects:
     - Anti-Chinese Sentiment in Coronavirus Tweets: "https://joekrinke15.github.io/2020-04-20-Measuring-Anti-Chinese-Comments-in-Coronavirus-Tweets/"
     - Identifying Tuberculosis With Lung Images: "https://joekrinke15.github.io/2020-03-05-Lung-Image-Analysis-Tuberculosis-Identification/"
