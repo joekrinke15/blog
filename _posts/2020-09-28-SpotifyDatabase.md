@@ -20,7 +20,7 @@ A primary key is a value or set of values that uniquely identifies a set of attr
 For example, the track album name is transitively dependent on the track album ID; knowing the ID of the track means you *KNOW* the value of the track album ID which, in turn, means you *KNOW* the name of the album. 
 
 <p align="center">
-<img src ='https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/albuminfo.PNG?raw=true'/>
+<img src ='https://raw.githubusercontent.com/joekrinke15/blog/master/img/albuminfo.PNG'/>
   <em>An Example of Transitive Dependence</em>
 </p>
 
@@ -97,7 +97,7 @@ LIMIT 10
 
 ```
 <p align="center">
-<img src ='https://github.com/joekrinke15/JoeKrinke15.github.io/blob/master/img/NumberInstrumentals.PNG?raw=true'/>
+<img src ='https://raw.githubusercontent.com/joekrinke15/blog/master/img/NumberInstrumentals.PNG'/>
   <em>Playlists Containing the Most Instrumental Songs</em>
 </p>
 
@@ -113,7 +113,7 @@ ORDER by AVG(tracks.danceability) DESC
 ```
 
 <p align="center">
-<img src ='https://raw.githubusercontent.com/joekrinke15/JoeKrinke15.github.io/master/img/Danceability.PNG'/>
+<img src ='https://raw.githubusercontent.com/joekrinke15/blog/master/img/Danceability.PNG'/>
 <br>
 <em>Genres by Danceability</em>
 </p>
