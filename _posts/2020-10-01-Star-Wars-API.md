@@ -49,7 +49,7 @@ birth_year = []
 for i in all_results:
     birth_year.append((i['birth_year']))
 ```
-The birth years are in a string format with BBY at the end. We need to create a function to get the year values from the string.
+The birth years are in a string format with ABY at the end. We need to create a function to get the year values from the string.
 
 ```python3
 def get_num(x):
