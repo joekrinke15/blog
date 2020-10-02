@@ -19,11 +19,20 @@ Now that we have some of the data in JSON format we can see what an individual r
 # Look at a record
 characters['results'][0]
 ```
-Interestingly enough, the API only provides us with 10 characters worth of information. Each time we call requests.get() we only get information from the current page we are looking at. Luckily, we can use 'next' to move on to the next page of data. You can see below that passing in next takes us to page 2.
+<p align="center">
+<img src ='https://raw.githubusercontent.com/joekrinke15/blog/master/img/luke.PNG'/>
+</p>
 
+Interestingly enough, the API only provides us with 10 characters worth of information. Each time we call requests.get() we only get information from the current page we are looking at. Luckily, we can use 'next' to move on to the next page of data. You can see below that passing in next takes us to page 2.
 ```python3
 characters['next']
 ```
+
+<p align="center">
+<img src ='https://raw.githubusercontent.com/joekrinke15/blog/master/img/page2.PNG'/>
+</p>
+
+
 We can use the next feature in a while loop to continually get more data as long as the next page exists. This will allow us to access all the data over multiple pages. 
 ```python3
 # Create an initial request
@@ -80,7 +89,7 @@ oldest_character = all_results[max_index]
 # Print the result
 print(oldest_character['name'], oldest_character['birth_year'])
 ```
-The oldest character is Yoda!
+The oldest character is Yoda! He lived to be 900 years old.
 
 <p align="center">
 <img src ='https://cdn2.lamag.com/wp-content/uploads/sites/6/2019/12/baby-yoda-lucasfilm-1068x711.jpg'/>
@@ -93,6 +102,10 @@ I'm embarassed to admit I'm not sure what movies he appears in, as I haven't act
 # Try to look at Yoda's movie appearances 
 oldest_character['films']
 ```
+<p align="center">
+<img src ='https://raw.githubusercontent.com/joekrinke15/blog/master/img/films.PNG'/>
+</p>
+
 It seems that, when you try to access the films, it just links to more pages of data. We'll need to use the API to get the names of the films.
 
 ```python3
