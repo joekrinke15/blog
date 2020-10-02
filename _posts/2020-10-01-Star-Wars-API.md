@@ -3,13 +3,18 @@ layout: post
 title: Downloading Star Wars Data at Lightspeed
 full-width: true
 ---
-
+In this post I will be using the Star Wars API (SWAPI) to learn more about some of the classic characters from Star Wars. I'll be using the requests package to access the data. The first step of accessing the data is making a request. Once you have the data you've requested from the API you can begin using it. Data is commonly sent in JSON format. 
 ```python3
+# Make a request
 r = requests.get('https://swapi.dev/api/people/')
+
+# Get the data in json format
 characters = r.json()
 ```
+Now that we have some of the data in JSON format we can see what an individual record looks like. 
 
 ```python3
+# Look at a record
 characters['results'][0]
 ```
 
