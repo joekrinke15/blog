@@ -57,3 +57,29 @@ def get_num(x):
     else:
         return math.nan
 ```
+
+```python3
+# Apply the function to the list using mapping
+cleaned_list = list(map(get_num, birth_year))
+# Get the index corresponding to the oldest character
+max_index = cleaned_list.index(max(cleaned_list))
+# Use the index to get the oldest character's information
+oldest_character = all_results[max_index]
+# Print the result
+print(oldest_character['name'], oldest_character['birth_year'])
+```
+
+```python3
+# Try to look at Yoda's movie appearances 
+oldest_character['films']
+```
+
+```python3
+# Create a list to hold the titles of the films
+film_list = []
+for i in oldest_character['films']: # Iterate over each film in the list
+    film = requests.get(i) # Create a response for each film
+    film_list.append(film.json()['title']) # Get the json version of the data and access the title. Append the title of each film to the list.
+    # Print the films Yoda has been in 
+print(film_list)
+```
