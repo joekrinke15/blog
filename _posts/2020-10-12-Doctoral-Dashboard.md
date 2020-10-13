@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Analyzing Doctoral Program Outcomes
+title: Dashboarding Doctoral Outcomes
 full-width: true
 ---
 
