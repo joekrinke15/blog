@@ -20,7 +20,10 @@ This basic building block, called the perceptron, can be stacked repeatedly to f
 # How do Neural Networks Learn?
 The goal of a neural network is to minimize a loss function. The loss function is a function that compares the prediction of the neural network to the true value to determine how good or bad the prediction is. One such loss function, mean squared error, is used to evaluate numerical predictions (ex: predicting the price of a house). This loss is the average squared difference between the predicted value and the true value.
 
-![MSE](https://miro.medium.com/max/880/1*20m_U-H6EIcxlN2k07Z7oQ.png)
+<p float="center">
+  <img src="https://miro.medium.com/max/880/1*20m_U-H6EIcxlN2k07Z7oQ.png"/>
+ </p>
+
 
 The computed loss value is then used to adjust the neural network's weights in a process called gradient descent. Gradient descent takes the calculated error value and determines how to best update the neural network weights with backpropagation. Backpropagation uses calculus to find the optimal 
 "direction" to update your weights in order to minimize the error function. The illustration below demonstrates how gradient descent works to minimize the loss.
@@ -29,27 +32,38 @@ The computed loss value is then used to adjust the neural network's weights in a
   <img src="https://rasbt.github.io/mlxtend/user_guide/general_concepts/gradient-optimization_files/ball.png"/>
  </p>
 
-Networks are typically trained by feeding multiple observations into the model at once. Each set of observations is called a batch. The weights are updated every single time that you feed a batch into the network. If you feed batches into the network until you've used up all of your training data that is called an epoch. Deeper networks require more epochs of training to produce good results. 
+Networks are typically trained by feeding multiple observations into the model at once. Each set of observations is called a batch. The weights are updated every single time that you feed a batch into the network. Another term commonly used in deep learning is epoch; an epoch is one full iteration through the dataset. Deeper networks often require more epochs of training to produce good results. 
 
-We've established a simple framework for constructing and training neural networks.The same basic principles apply to any deep learning problem- your goal is always to minimize some loss function by adjusting the weights of a network. More complex problems can be solved using different combinations of loss functions, gradient descent algorithms, and network structures. 
+We've established a simple framework for constructing and training neural networks. The same basic principles apply to any deep learning problem- your goal is always to minimize some loss function by adjusting the weights of a network. More complex problems can be solved using different combinations of loss functions, gradient descent algorithms, and network structures. 
 
 # Convolutional Neural Networks
 As I mentioned earlier, we can use images as inputs to neural networks. The most common network type applied to image inputs is called a convolutional neural network. A convolutional neural network applies an operation called a convolution to extract information, often called features, from the images. You can think of a convolution as scanning over an image and shrinking or compressing it into a smaller set of data. The gif below shows a 5x5 image being convolved to produce a 3x3 set of features.
-<p float="center">
- <img src="https://miro.medium.com/max/2340/1*Fw-ehcNBR9byHtho-Rxbtw.gif" />
+<p align="center">
+
+  <img src="https://miro.medium.com/max/2340/1*Fw-ehcNBR9byHtho-Rxbtw.gif">
+  <em>Convolution Operation</em>
+
 </p>
 
 After the image has gone through a convolution, an operation called max pooling is often applied. Max pooling further reduces the dimensionality of the image by only taking the largest pixel values from each section of an image.
 
-<p float="center">
- <img src="https://thumbs.gfycat.com/FirstMediumDalmatian-max-14mb.gif" />
+<p align="center">
+
+  <img src="https://thumbs.gfycat.com/FirstMediumDalmatian-max-14mb.gif">
+  <em>Max Pooling<em>
+
 </p>
 
 These image features go through layers of convolution and maxpooling repeatedly until they are eventually flattened and fed into a traditional (fully connected) neural network. This network makes predictions using the extracted features. 
 
-<p float="center">
- <img src="https://miro.medium.com/proxy/1*N4h1SgwbWNmtrRhszM9EJg.png" />
+
+<p align="center">
+
+  <img src="https://miro.medium.com/proxy/1*N4h1SgwbWNmtrRhszM9EJg.png">
+  <em>Sample Convolutional Network Architecture</em>
+
 </p>
+
 
 # Classifying Insect Images with a Convolutional Neural Network
 
@@ -62,23 +76,30 @@ As an example, let's use a convolutional neural network to classify images of in
 </p>
 
 I'm going to start by using a pretrained network, called [VGG-16](https://arxiv.org/pdf/1409.1556.pdf), that has already been trained on the [imagenet](http://www.image-net.org/) dataset. I kept all of the weights frozen except for the weights of the final layer. Additionally, I changed the output structure so it would only predict 3 classes: cockroach, dragonfly, or beetle. You can see the structure of the network below. 
-
-<p float="center">
-  <img src="https://tech.showmax.com/2017/10/convnet-architectures/image_0-8fa3b810.png"/>
- </p>
  
-We can visualize how the network extracts features from the image by looking at different layers of the network. Here you can see layer 5, 30, 100, and 300. 
+ <p align="center">
+
+  <img src="https://tech.showmax.com/2017/10/convnet-architectures/image_0-8fa3b810.png">
+  
+  <em>VGG-16 Network Architecture</em>
+
+</p>
+ 
+We can visualize how the network extracts features from the image by looking at different layers of the network. Here you can see layers 5, 30, 100, and 300. 
 
 <p float="center">
   <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer5.png" width="450" />
   <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer30.png" width="450" /> 
 </p>
 
-<p float="center">
+ <p align="center">
+
   <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer100.png" width="450" />
   <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer300.png" width="450" />
-</p>
+  
+  <em>Layers 5, 30, 100, and 300 </em>
 
+</p>
 You can see that the features get broader and less detailed as you move into the deeper layers of the network. This shows that the model is creating a more compact representation of the image. 
 
 In terms of training, I fed the images into the network in batches of 32 and trained for 4 total epochs. This resulted in an end accuracy of 99.4% on the validation data.
