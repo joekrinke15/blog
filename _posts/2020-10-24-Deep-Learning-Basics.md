@@ -65,4 +65,4 @@ We can visualize how the network extracts features from the image by looking at 
   <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer300.png" width="450" />
 </p>
 
-You can see that the features get broader and less detailed as you move into the deeper layers of the network. This shows that the model is reducing 
+You can see that the features get broader and less detailed as you move into the deeper layers of the network. This shows that the model is creating a more compact representation of the image. 
