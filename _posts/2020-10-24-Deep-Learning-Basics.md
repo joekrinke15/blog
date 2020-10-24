@@ -41,3 +41,13 @@ These image features go through layers of convolution and maxpooling repeatedly 
 ![CNN](https://miro.medium.com/proxy/1*N4h1SgwbWNmtrRhszM9EJg.png)
 
 # Classifying Insect Images with a Convolutional Neural Network
+
+As an example, let's use a convolutional neural network to classify images of insects. The goal is to determine whether a given image has a cockroach, dragonfly, or beetle.
+
+<p float="center">
+  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5402041.jpg" width="300" />
+  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5364300.jpg" width="300" /> 
+  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5560729.jpg" width="300" />
+</p>
+
+I'm going to start by using a pretrained network, called 
