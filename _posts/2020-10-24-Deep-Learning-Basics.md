@@ -14,9 +14,18 @@ The image below shows a simple neural network. The inputs are X1, X2, and X3. Th
 
 ![neuralnetwork](https://i.stack.imgur.com/xqPAc.png)
 
-This basic building block, called the perceptron, can be stacked repeatedly. These deeper networks can learn more complex relationships between inputs and outputs.
+This basic building block, called the perceptron, can be stacked repeatedly to form a larger network. These deeper networks can learn more complex relationships between inputs and outputs.
 
 ![complexnetwork](https://victorzhou.com/media/nn-series/network.png)
 # How do Neural Networks Learn?
+The goal of a neural network is to minimize a loss function. The loss function is a function that compares the prediction of the neural network to the true value to determine how good or bad the prediction is. One such loss function, mean squared error, is used to evaluate numerical predictions (ex: predicting the price of a house). This loss is the average squared difference between the predicted value and the true value.
+
+![MSE](https://miro.medium.com/max/880/1*20m_U-H6EIcxlN2k07Z7oQ.png)
+
+The computed loss value is then used to adjust the neural network's weights in a process called gradient descent. Gradient descent takes the calculated error value and determines how to best update the neural network weights with backpropagation. Backpropagation uses calculus to find the optimal 
+"direction" to update your weights in order to minimize the error function. The illustration below demonstrates how gradient descent works to minimize the loss.
+![gradientdescent](https://rasbt.github.io/mlxtend/user_guide/general_concepts/gradient-optimization_files/ball.png)
+
+We've established a simple framework for constructing and training neural networks.The same basic principles apply to any deep learning problem- your goal is always to minimize some loss function by adjusting the weights of a network. More complex problems can be solved using different combinations of loss functions, gradient descent algorithms, and network structures. 
 
 # Classifying Insect Images with a Neural Network
