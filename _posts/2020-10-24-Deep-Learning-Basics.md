@@ -21,7 +21,9 @@ This basic building block, called the perceptron, can be stacked repeatedly to f
 The goal of a neural network is to minimize a loss function. The loss function is a function that compares the prediction of the neural network to the true value to determine how good or bad the prediction is. One such loss function, mean squared error, is used to evaluate numerical predictions (ex: predicting the price of a house). This loss is the average squared difference between the predicted value and the true value.
 
 <p align="center">
+  
   <img src="https://miro.medium.com/max/880/1*20m_U-H6EIcxlN2k07Z7oQ.png"/>
+  
  </p>
 
 
@@ -29,7 +31,9 @@ The computed loss value is then used to adjust the neural network's weights in a
 "direction" to update your weights in order to minimize the error function. The illustration below demonstrates how gradient descent works to minimize the loss.
 
 <p align = "center">
+  
   <img src="https://rasbt.github.io/mlxtend/user_guide/general_concepts/gradient-optimization_files/ball.png"/>
+  
  </p>
 
 Networks are typically trained by feeding multiple observations into the model at once. Each set of observations is called a batch. The weights are updated every single time that you feed a batch into the network. Another term commonly used in deep learning is epoch; an epoch is one full iteration through the dataset. Deeper networks often require more epochs of training to produce good results. 
@@ -50,6 +54,7 @@ After the image has gone through a convolution, an operation called max pooling 
 <p align="center">
 
   <img src="https://thumbs.gfycat.com/FirstMediumDalmatian-max-14mb.gif"/>
+  
   <em>Max Pooling</em>
 
 </p>
@@ -70,9 +75,11 @@ These image features go through layers of convolution and maxpooling repeatedly 
 As an example, let's use a convolutional neural network to classify images of insects. The goal is to determine whether a given image has a cockroach, dragonfly, or beetle.
 
 <p align="center">
+  
   <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5402041.jpg" width="300" />
   <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5364300.jpg" width="300" /> 
   <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5560729.jpg" width="300" />
+  
 </p>
 
 I'm going to start by using a pretrained network, called [VGG-16](https://arxiv.org/pdf/1409.1556.pdf), that has already been trained on the [imagenet](http://www.image-net.org/) dataset. I kept all of the weights frozen except for the weights of the final layer. Additionally, I changed the output structure so it would only predict 3 classes: cockroach, dragonfly, or beetle. You can see the structure of the network below. 
@@ -80,7 +87,9 @@ I'm going to start by using a pretrained network, called [VGG-16](https://arxiv.
 <p align="center">
 
   <img src="https://tech.showmax.com/2017/10/convnet-architectures/image_0-8fa3b810.png"/>
+  
   <em>VGG-16 Network Architecture</em>
+  
 </p>
  
 We can visualize how the network extracts features from the image by looking at different layers of the network. Here you can see layers 5, 30, 100, and 300. 
