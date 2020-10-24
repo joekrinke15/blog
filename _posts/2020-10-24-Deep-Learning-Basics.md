@@ -61,7 +61,7 @@ As an example, let's use a convolutional neural network to classify images of in
   <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5560729.jpg" width="300" />
 </p>
 
-I'm going to start by using a pretrained network, called [VGG-16](https://arxiv.org/pdf/1409.1556.pdf), that has already been trained on the [imagenet](http://www.image-net.org/) dataset. I kept all of the weights frozen except for the weights of the final layer. Additionally, I changed the output structure so it would only predict 3 classes: cockroach, dragonfly, or beetle. I fed the images into the network in batches of 32 and trained for 4 total epochs. This resulted in an end accuracy of 99.4% on the validation data. You can see the structure of the network below. 
+I'm going to start by using a pretrained network, called [VGG-16](https://arxiv.org/pdf/1409.1556.pdf), that has already been trained on the [imagenet](http://www.image-net.org/) dataset. I kept all of the weights frozen except for the weights of the final layer. Additionally, I changed the output structure so it would only predict 3 classes: cockroach, dragonfly, or beetle. You can see the structure of the network below. 
 
 <p float="center">
   <img src="https://tech.showmax.com/2017/10/convnet-architectures/image_0-8fa3b810.png"/>
@@ -79,4 +79,5 @@ We can visualize how the network extracts features from the image by looking at 
   <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer300.png" width="450" />
 </p>
 
-You can see that the features get broader and less detailed as you move into the deeper layers of the network. This shows that the model is creating a more compact representation of the image. 
+You can see that the features get broader and less detailed as you move into the deeper layers of the network. This shows that the model is creating a more compact representation of the image. In terms of training,  I fed the images into he network in batches of 32 and trained for 4 total epochs. This resulted in an end accuracy of 99.4% on the validation data.
+
