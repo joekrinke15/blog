@@ -79,5 +79,7 @@ We can visualize how the network extracts features from the image by looking at 
   <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer300.png" width="450" />
 </p>
 
-You can see that the features get broader and less detailed as you move into the deeper layers of the network. This shows that the model is creating a more compact representation of the image. In terms of training,  I fed the images into he network in batches of 32 and trained for 4 total epochs. This resulted in an end accuracy of 99.4% on the validation data.
+You can see that the features get broader and less detailed as you move into the deeper layers of the network. This shows that the model is creating a more compact representation of the image. 
+
+In terms of training, I fed the images into the network in batches of 32 and trained for 4 total epochs. This resulted in an end accuracy of 99.4% on the validation data.
 
