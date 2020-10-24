@@ -28,4 +28,16 @@ The computed loss value is then used to adjust the neural network's weights in a
 
 We've established a simple framework for constructing and training neural networks.The same basic principles apply to any deep learning problem- your goal is always to minimize some loss function by adjusting the weights of a network. More complex problems can be solved using different combinations of loss functions, gradient descent algorithms, and network structures. 
 
-# Classifying Insect Images with a Neural Network
+# Convolutional Neural Networks
+As I mentioned earlier, we can use images as inputs to neural networks. The most common network type applied to image inputs is called a convolutional neural network. A convolutional neural network applies an operation called a convolution to extract information, often called features, from the images. You can think of a convolution as scanning over an image and shrinking or compressing it into a smaller set of data. The gif below shows a 5x5 image being convolved to produce a 3x3 set of features.
+
+![ConvolutionGif](https://miro.medium.com/max/2340/1*Fw-ehcNBR9byHtho-Rxbtw.gif)
+
+After the image has gone through a convolution, an operation called max pooling is often applied. Max pooling further reduces the dimensionality of the image by only taking the largest pixel values from each section of an image.
+![maxpool](https://thumbs.gfycat.com/FirstMediumDalmatian-max-14mb.gif)
+
+These image features go through layers of convolution and maxpooling repeatedly until they are eventually flattened and fed into a traditional (fully connected) neural network. This network makes predictions using the extracted features. 
+
+![CNN](https://miro.medium.com/proxy/1*N4h1SgwbWNmtrRhszM9EJg.png)
+
+# Classifying Insect Images with a Convolutional Neural Network
