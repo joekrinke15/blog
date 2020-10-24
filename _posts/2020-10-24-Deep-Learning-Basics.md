@@ -26,6 +26,8 @@ The computed loss value is then used to adjust the neural network's weights in a
 "direction" to update your weights in order to minimize the error function. The illustration below demonstrates how gradient descent works to minimize the loss.
 ![gradientdescent](https://rasbt.github.io/mlxtend/user_guide/general_concepts/gradient-optimization_files/ball.png)
 
+Networks are typically trained by feeding multiple observations into the model at once. Each set of observations is called a batch. The weights are updated every single time that you feed a batch into the network. If you feed batches into the network until you've used up all of your training data that is called an epoch. Deeper networks require more epochs of training to produce good results. 
+
 We've established a simple framework for constructing and training neural networks.The same basic principles apply to any deep learning problem- your goal is always to minimize some loss function by adjusting the weights of a network. More complex problems can be solved using different combinations of loss functions, gradient descent algorithms, and network structures. 
 
 # Convolutional Neural Networks
@@ -50,4 +52,17 @@ As an example, let's use a convolutional neural network to classify images of in
   <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5560729.jpg" width="300" />
 </p>
 
-I'm going to start by using a pretrained network, called 
+I'm going to start by using a pretrained network, called [VGG-16](https://arxiv.org/pdf/1409.1556.pdf), that has already been trained on the [imagenet](http://www.image-net.org/) dataset. I kept all of the weights frozen except for the weights of the final layer. Additionally, I changed the output structure so it would only predict 3 classes: cockroach, dragonfly, or beetle. I fed the images into the network in batches of 32 and trained for 4 total epochs. This resulted in an end accuracy of 99.4% on the validation data. 
+
+We can visualize how the network extracts features from the image by looking at different layers of the network. I show layers 5, 30, 100, and 300 below. 
+
+<p float="center">
+  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer5.png" width="450" />
+  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer30.png" width="450" /> 
+</p>
+<p float="center">
+  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer100.png" width="450" />
+  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer300.png" width="450" />
+</p>
+
+You can see that the features get broader and less detailed as you move into the deeper layers of the network. This shows that the model is reducing 
