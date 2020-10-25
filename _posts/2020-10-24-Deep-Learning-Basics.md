@@ -63,7 +63,7 @@ After the image has gone through a convolution, an operation called max pooling 
 
 <p align="center">
 
-  <img src="https://thumbs.gfycat.com/FirstMediumDalmatian-max-14mb.gif"/>
+  <img src="https://thumbs.gfycat.com/FirstMediumDalmatian-max-14mb.gif" width="1000">
   <em>Maximum Pooling</em>
 
 </p>
