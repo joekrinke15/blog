@@ -106,14 +106,14 @@ I'm going to start by using a pretrained network, called [VGG-16](https://arxiv.
 We can visualize how the network extracts features from the image by looking at different layers of the network. Here you can see layers 5, 30, 100, and 300. 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer5.png" width="450" />
-  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer30.png" width="450" /> 
+  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer5.png" width="500" />
+  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer30.png" width="500" /> 
 </p>
 
 <p align="center">
 
-  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer100.png" width="450" />
-  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer300.png" width="450" />
+  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer100.png" width="500" />
+  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/layer300.png" width="500" />
   <em>Layers 5, 30, 100, and 300 </em>
 
 </p>
