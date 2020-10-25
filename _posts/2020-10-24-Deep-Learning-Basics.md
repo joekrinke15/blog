@@ -117,7 +117,7 @@ We can visualize how the network extracts features from the image by looking at 
   <em>Layers 5, 30, 100, and 300 </em>
 
 </p>
-You can see that the features get broader and less detailed as you move into the deeper layers of the network. This shows that the model is creating a more compact representation of the image. In terms of training, I fed the images into the network in batches of 32 and trained for 4 total epochs. This resulted in an end accuracy of 99.4% on the validation data.
+You can see that the features get broader and less detailed as you move into the deeper layers of the network. This shows that the model is creating a more compact representation of the image. In terms of training, I fed the images into the network in batches of 32 and trained for 4 total epochs. This resulted in an end accuracy of 99.4% on the validation data. Here's a [link](https://colab.research.google.com/drive/1JrLFAQJwIjzNL_IoTxn8kqUc0v8PbTSI?usp=sharing) to a notebook of my modeling process.
 
 That's all for my introduction to neural networks and deep learning! Feel free to check out my sources below if you want to learn more. 
 
