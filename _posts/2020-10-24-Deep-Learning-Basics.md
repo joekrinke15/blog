@@ -124,7 +124,11 @@ That's all for my introduction to neural networks and deep learning! Feel free t
 # Sources
 
 [Basic Backpropagation](https://page.mi.fu-berlin.de/rojas/neural/chapter/K7.pdf)
+
 [Overview of Neural Networks and Deep Learning](https://static.latexstudio.net/article/2018/0912/neuralnetworksanddeeplearning.pdf)
+
 [Advanced Convolutional Neural Networks and Backpropagation](http://deeplearning.stanford.edu/tutorial/supervised/ConvolutionalNeuralNetwork/)
+
 [VGG-16](https://arxiv.org/pdf/1409.1556.pdf)
+
 [ImageNet](http://www.image-net.org/)
