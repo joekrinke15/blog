@@ -87,9 +87,9 @@ As an example, let's use a convolutional neural network to classify images of in
 
 <p align="center">
   
-  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5402041.jpg" width="300" />
-  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5364300.jpg" width="300" /> 
-  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5560729.jpg" width="300" />
+  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5402041.jpg" width="333" />
+  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5364300.jpg" width="333" /> 
+  <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5560729.jpg" width="333" />
   <em>Cockroaches, Dragonflies, and Beetles</em>
   
 </p>
