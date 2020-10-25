@@ -12,18 +12,27 @@ A neural network, in its simplest form, takes a series of inputs (images, text, 
 
 The image below shows a simple neural network. The inputs are X1, X2, and X3. These inputs are combined together using numbers called weights. Weights determine how much of each input you want to pass on to the next layer. For example, if my weights were: W1: .3, W2: .5, W3: .2, that would mean I want the next layer to be 30% W1, 50% W2, and 20% W3. This summed input is then fed into another function, often a sigmoid, to produce the end prediction Y. 
 
-![neuralnetwork](https://i.stack.imgur.com/xqPAc.png)
-
-This basic building block, called the perceptron, can be stacked repeatedly to form a larger network. These deeper networks can learn more complex relationships between inputs and outputs.
-
-![complexnetwork](https://victorzhou.com/media/nn-series/network.png)
-# How do Neural Networks Learn?
-The goal of a neural network is to minimize a loss function. The loss function is a function that compares the prediction of the neural network to the true value to determine how good or bad the prediction is. One such loss function, mean squared error, is used to evaluate numerical predictions (ex: predicting the price of a house). This loss is the average squared difference between the predicted value and the true value.
 
 <p align="center">
   
-  <img src="https://miro.medium.com/max/880/1*20m_U-H6EIcxlN2k07Z7oQ.png"/>
+  <img src="https://i.stack.imgur.com/xqPAc.png" >
+  <em>Perceptron</em>
+ </p>
+
+This basic building block, called the perceptron, can be stacked repeatedly to form a larger network. These deeper networks can learn more complex relationships between inputs and outputs.
+<p align="center">
   
+  <img src="https://victorzhou.com/media/nn-series/network.png" >
+  <em>Sample Neural Network</em>
+ </p>
+
+# How do Neural Networks Learn?
+The goal of a neural network is to minimize a loss function. The loss function is a function that compares the prediction of the neural network to the true value to determine how good or bad the prediction is. One such loss function, mean square error, is used to evaluate numerical predictions (ex: predicting the price of a house). This loss is the average squared difference between the predicted value and the true value.
+
+<p align="center">
+  
+  <img src="https://miro.medium.com/max/880/1*20m_U-H6EIcxlN2k07Z7oQ.png" width = "1000">
+  <em>Mean Square Error Loss</em>
  </p>
 
 
@@ -33,6 +42,7 @@ The computed loss value is then used to adjust the neural network's weights in a
 <p align = "center">
   
   <img src="https://rasbt.github.io/mlxtend/user_guide/general_concepts/gradient-optimization_files/ball.png"/>
+  <em>Gradient Descent</em>
   
  </p>
 
@@ -80,6 +90,7 @@ As an example, let's use a convolutional neural network to classify images of in
   <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5402041.jpg" width="300" />
   <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5364300.jpg" width="300" /> 
   <img src="https://raw.githubusercontent.com/joekrinke15/blog/master/img/5560729.jpg" width="300" />
+  <em>Cockroaches, Dragonflies, and Beetles</em>
   
 </p>
 
@@ -106,7 +117,14 @@ We can visualize how the network extracts features from the image by looking at 
   <em>Layers 5, 30, 100, and 300 </em>
 
 </p>
-You can see that the features get broader and less detailed as you move into the deeper layers of the network. This shows that the model is creating a more compact representation of the image. 
+You can see that the features get broader and less detailed as you move into the deeper layers of the network. This shows that the model is creating a more compact representation of the image. In terms of training, I fed the images into the network in batches of 32 and trained for 4 total epochs. This resulted in an end accuracy of 99.4% on the validation data.
 
-In terms of training, I fed the images into the network in batches of 32 and trained for 4 total epochs. This resulted in an end accuracy of 99.4% on the validation data.
+That's all for my introduction to neural networks and deep learning! Feel free to check out my sources below if you want to learn more. 
 
+# Sources
+
+[Basic Backpropagation](https://page.mi.fu-berlin.de/rojas/neural/chapter/K7.pdf)
+[Overview of Neural Networks and Deep Learning](https://static.latexstudio.net/article/2018/0912/neuralnetworksanddeeplearning.pdf)
+[Advanced Convolutional Neural Networks and Backpropagation](http://deeplearning.stanford.edu/tutorial/supervised/ConvolutionalNeuralNetwork/)
+[VGG-16](https://arxiv.org/pdf/1409.1556.pdf)
+[ImageNet](http://www.image-net.org/)
