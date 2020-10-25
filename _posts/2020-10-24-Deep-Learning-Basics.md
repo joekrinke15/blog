@@ -54,10 +54,11 @@ After the image has gone through a convolution, an operation called max pooling 
 <p align="center">
 
   <img src="https://thumbs.gfycat.com/FirstMediumDalmatian-max-14mb.gif"/>
-  
-  <em>Max Pooling</em>
+  <em>Maximum Pooling</em>
 
 </p>
+
+                                                                        
 
 These image features go through layers of convolution and maxpooling repeatedly until they are eventually flattened and fed into a traditional (fully connected) neural network. This network makes predictions using the extracted features. 
 
@@ -86,9 +87,8 @@ I'm going to start by using a pretrained network, called [VGG-16](https://arxiv.
  
 <p align="center">
 
-  <img src="https://tech.showmax.com/2017/10/convnet-architectures/image_0-8fa3b810.png"/>
-  
-  <em>VGG-16 Network Architecture</em>
+  <img src="https://tech.showmax.com/2017/10/convnet-architectures/image_0-8fa3b810.png" width = "1000" />
+  <em>Network Architecture of VGG-16</em>
   
 </p>
  
