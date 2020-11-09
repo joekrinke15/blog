@@ -31,48 +31,17 @@ The goal is for the primary key to be the only information in a table that allow
 Here's an overview of the end result: 
 
 <center>
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-0pky">Table Name</th>
-    <th class="tg-0pky">Contents</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">tracks</td>
-    <td class="tg-0pky">Track ID and Song Characteristics</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">album_name</td>
-    <td class="tg-0pky">Album Name and Album ID</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">album_release</td>
-    <td class="tg-0pky">Album ID and Release Date</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">playlist</td>
-    <td class="tg-0lax">Playlist ID and Playlist Characteristics</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">track_playlist</td>
-    <td class="tg-0lax">Track ID and Playlist ID</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">track_name</td>
-    <td class="tg-0lax">Track ID and Track Name</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">track_artist</td>
-    <td class="tg-0lax">Track ID and Artist Name</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">track_album</td>
-    <td class="tg-0lax">Track ID and Album ID</td>
-  </tr>
-</tbody>
-</table>
+
+| Table Name  | Contents    |
+| ----------- | ----------- |
+| tracks       | track id and song characteristics|
+| album_name  | album name and album id       |
+| album release | album id and release date|
+| playlist_genre  | playlist id and genre|
+|playlist_name|playlist name and playlist id |
+|playlist_subgenre| playlist id and playlist genre|
+| track_playlist | track id and playlist id |
+| track_artist | track id and artist name|
 </center>
 
 # Testing the Database
@@ -82,19 +51,18 @@ Now that we have our database we can start to explore song trends. One of the pi
 ```python3
 %%sql 
 SELECT PlaylistName, NumberInstrumentals
-FROM (SELECT COUNT(DISTINCT(tracks.track_id)) as NumberInstrumentals, playlist.playlist_name as PlaylistName
+FROM (SELECT COUNT(DISTINCT(tracks.track_id)) as NumberInstrumentals, playlist_name.playlist_name as PlaylistName
       FROM tracks
       JOIN track_playlist ON track_playlist.track_id = tracks.track_id
       JOIN track_name ON track_name.track_id = tracks.track_id
       JOIN track_artist ON track_artist.track_id = tracks.track_id
-      JOIN playlist ON playlist.playlist_id = track_playlist.playlist_id
+      JOIN playlist_name ON playlist_name.playlist_id = track_playlist.playlist_id
       WHERE tracks.instrumentalness >.50
-      GROUP BY playlist.playlist_name
+      GROUP BY playlist_name.playlist_name
      )
 WHERE NumberInstrumentals > 0
 ORDER BY NumberInstrumentals DESC
 LIMIT 10
-
 ```
 <p align="center">
 <img src ='https://raw.githubusercontent.com/joekrinke15/blog/master/img/NumberInstrumentals.PNG'/>
@@ -104,11 +72,11 @@ LIMIT 10
 We can also take a look at which genres of music are the most danceable. 
 ```python3
 %%sql
-SELECT AVG(tracks.danceability) as Danceability, playlist.playlist_genre as Genre
+SELECT AVG(tracks.danceability) as Danceability, playlist_genre.playlist_genre as Genre
 FROM tracks
-JOIN playlist ON playlist.playlist_id = track_playlist.playlist_id
+JOIN playlist_genre ON playlist_genre.playlist_id = track_playlist.playlist_id
 JOIN track_playlist ON track_playlist.track_id = tracks.track_id
-GROUP BY playlist.playlist_genre
+GROUP BY playlist_genre.playlist_genre
 ORDER by AVG(tracks.danceability) DESC
 ```
 
