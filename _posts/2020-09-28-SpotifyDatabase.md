@@ -30,19 +30,17 @@ The goal is for the primary key to be the only information in a table that allow
 
 Here's an overview of the end result: 
 
-<center>
 
 | Table Name  | Contents    |
 | ----------- | ----------- |
 | tracks       | track id and song characteristics|
-| album_name  | album name and album id       |
+| album_name  | album name and album id|
 | album release | album id and release date|
 | playlist_genre  | playlist id and genre|
 |playlist_name|playlist name and playlist id |
 |playlist_subgenre| playlist id and playlist genre|
 | track_playlist | track id and playlist id |
 | track_artist | track id and artist name|
-</center>
 
 # Testing the Database
 
