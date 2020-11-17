@@ -16,10 +16,13 @@ The overarching goal of our project was to examine two separate questions: do ce
 In order to answer the two questions we are interested in, we separated our dashboard into 5 components: general trends, disease to demographics, demographics to disease, a market basket analysis, and a co-occurrence analysis. 
 
 ### General Trends
+This section provides information on the most common diseases, patient demographic distributions, and hospital admission locations.
 
 ### Disease to Demographics
+This portion of the dashboard allows you to select a disease and see what kinds of people have that disease and how they entered the hospital. 
 
 ### Demographics to Disease
+The opposite of disease to demographics, demographics to disease lets you input demographic information and see what kinds of diseases people with those characteristics suffer from. 
 
 ### Market Basket Analysis
 
