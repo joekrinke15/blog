@@ -13,6 +13,17 @@ The dataset we used is called [MIMIC-III](https://mimic.physionet.org/). This da
 The overarching goal of our project was to examine two separate questions: do certain diseases tend to occur together and how does disease prevalence vary across demographic groups. Our target audience was hospital administrators and physicians, as they could use this information to change how their hospital responds to the needs of their community. For example, if it is found that most severe illnesses tend to occur with a preventable underlying condition (such as obesity, smoking, or mismanaged diabetes), a program could be developed to help the local community take ownership of their own health. These efforts could be further targeted by examining which demographic groups tend to experience a given health problem. 
 
 # Dashboard Components
+In order to answer the two questions we are interested in, we separated our dashboard into 5 components: general trends, disease to demographics, demographics to disease, a market basket analysis, and a co-occurence analysis. 
+
+### General Trends
+
+### Disease to Demographics
+
+### Demographics to Disease
+
+### Market Basket Analysis
+
+### Co-occurrence Analysis
 
 # Sample Insights and Conclusion
 
