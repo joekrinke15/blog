@@ -33,14 +33,28 @@ The opposite of disease to demographics, demographics to disease lets you input 
 
 ### Market Basket Analysis
 
+
 ### Co-occurrence Analysis
 
 # Sample Insights and Conclusion
 
 # Technologies Used
-
-| | | |
-|:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://miro.medium.com/max/644/1*l3DUScBKumyAE1e8dt95vQ.png">|  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://miro.medium.com/max/1125/1*B9CIOrxdROHvtdmouQA1_A.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://cdn.worldvectorlogo.com/logos/mysql.svg">|
-|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://assets.website-files.com/5dc3b47ddc6c0c2a1af74ad0/5e18182db827fa0659541754_RGB_Logo_Vertical_Color_Light_Bg.png"> |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Plotly-logo-01-square.png/1200px-Plotly-logo-01-square.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://miro.medium.com/max/592/0*zKRz1UgqpOZ4bvuA">|
-|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://networkx.org/_static/networkx_logo.svg">  |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://pandas.pydata.org/static/img/pandas.svg">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/1024px-NumPy_logo_2020.svg.png">|
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-c3ow"><img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://miro.medium.com/max/644/1*l3DUScBKumyAE1e8dt95vQ.png"></td>
+    <td class="tg-c3ow"><img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://miro.medium.com/max/1125/1*B9CIOrxdROHvtdmouQA1_A.png"></td>
+    <td class="tg-c3ow"><img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://cdn.worldvectorlogo.com/logos/mysql.svg"></td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow"><img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://assets.website-files.com/5dc3b47ddc6c0c2a1af74ad0/5e18182db827fa0659541754_RGB_Logo_Vertical_Color_Light_Bg.png"></td>
+    <td class="tg-c3ow"><img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Plotly-logo-01-square.png/1200px-Plotly-logo-01-square.png"></td>
+    <td class="tg-c3ow"><img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://miro.medium.com/max/592/0*zKRz1UgqpOZ4bvuA"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://networkx.org/_static/networkx_logo.svg"></td>
+    <td class="tg-0pky"><img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://pandas.pydata.org/static/img/pandas.svg"></td>
+    <td class="tg-0pky"><img width = "1604" src= "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/1024px-NumPy_logo_2020.svg.png"></td>
+  </tr>
+</tbody>
+</table>
