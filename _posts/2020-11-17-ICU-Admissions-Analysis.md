@@ -67,7 +67,9 @@ While we were building the dashboard we came up with some sample insights to ill
 *  Asians are underrepresented compared to the Asian population where the hospital is located (2.5% to 7% in Boston, MA).
   * Asian patients tend to be young women who are having children.
 * Only 49% of patients are admitted to the ICU from the emergency room.
-  ** Many patients are coming from long-term care facilities.
+  * Many patients are coming from long-term care facilities.
+  
+Overall, our dashboard could serve as a useful tool to physicians and hospital administrators. It can be used to guide potential community-health interventions and monitor the health of various demographic groups. 
 
 # Technologies Used
 <table class="tg">
