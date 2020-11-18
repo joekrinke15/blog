@@ -4,7 +4,7 @@ title: Analyzing ICU Admissions at Beth Isreal Deaconess Medical Center
 full-width: true
 image: https://raw.githubusercontent.com/joekrinke15/blog/master/img/icu.png
 ---
-In this post I'll be discussing my final project for Biostatistics 823: Statistical Programming for Big Data, a course I took at Duke University. My classmates and I built an interactive dashboard to explore ICU admission trends at Beth Isreal Deaconess Medical center. My teammates on this project were [Alena Kalodzitsa](https://www.linkedin.com/in/alenakalodzitsa/), [Felipe Buchbinder](https://www.linkedin.com/in/felipe-buchbinder-a65a0199/), and [Chenxi Wu](https://www.linkedin.com/in/chenxi-wu-107452175/). This project would not have been possible without them. 
+In this post I'll be discussing my final project for Biostatistics 823: Statistical Programming for Big Data, a course I took at Duke University. For this project, my classmates and I built an interactive dashboard to explore ICU admission trends at Beth Isreal Deaconess Medical center. My teammates on this project were [Alena Kalodzitsa](https://www.linkedin.com/in/alenakalodzitsa/), [Felipe Buchbinder](https://www.linkedin.com/in/felipe-buchbinder-a65a0199/), and [Chenxi Wu](https://www.linkedin.com/in/chenxi-wu-107452175/). This project would not have been possible without them. 
 
 # MIMIC-III Dataset
 The dataset we used is called [MIMIC-III](https://mimic.physionet.org/). This database contains over 60,000 ICU patient records collected from 2001-2012 at Beth Isreal Deaconess Medical Center. The data was compiled by the MIT Lab for Computational Physiology and preprocessed to protect patient identity. 
@@ -52,13 +52,22 @@ This graph shows the results of a market basket analysis of diseases. Specifical
 
 
 ### Co-occurrence Analysis
-Here you can select a disease and view a network of conditions that people with this disease have. This can be used to identify different groups of individuals who all have the same diagnosis.
+Here you can select a disease and view a network of conditions that people with this disease have. This can be used to identify different groups of individuals who all have the same diagnosis. The co-occurrence matrix used here was generated using the [Natural Language Toolkit (NLTK)](https://www.nltk.org/) package. The nodes and edges of the graph were constructed using [NetworkX](https://networkx.org/documentation/stable/index.html).
 
 <p align="center">
   <img src="https://github.com/joekrinke15/blog/blob/master/img/cooccur.PNG?raw=true" />
 </p>
 
 # Sample Insights and Conclusion
+
+While we were building the dashboard we came up with some sample insights to illustrate its potential value. Here's some of what we found:
+
+* The majority of patients in the ICU have some form of hypertension.
+  * Hypertension is disproportionately present in Black patients.
+*  Asians are underrepresented compared to the Asian population where the hospital is located (2.5% to 7% in Boston, MA).
+  * Asian patients tend to be young women who are having children.
+* Only 49% of patients are admitted to the ICU from the emergency room.
+  ** Many patients are coming from long-term care facilities.
 
 # Technologies Used
 <table class="tg">
