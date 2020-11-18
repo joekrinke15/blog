@@ -25,16 +25,38 @@ In order to answer the two questions we are interested in, we separated our dash
 ### General Trends
 This section provides information on the most common diseases, patient demographic distributions, and hospital admission locations.
 
+<p align="center">
+  <img src="https://github.com/joekrinke15/blog/blob/master/img/generaltrends.PNG?raw=true" />
+</p>
+
 ### Disease to Demographics
 This portion of the dashboard allows you to select a disease and see what kinds of people have that disease and how they entered the hospital. 
+
+<p align="center">
+  <img src="https://github.com/joekrinke15/blog/blob/master/img/diseasetodemo.PNG?raw=true" />
+</p>
 
 ### Demographics to Disease
 The opposite of disease to demographics, demographics to disease lets you input demographic information and see what kinds of diseases people with those characteristics suffer from. 
 
+<p align="center">
+  <img src="https://github.com/joekrinke15/blog/blob/master/img/demotodisease.PNG?raw=true" />
+</p>
+
 ### Market Basket Analysis
+This graph shows the results of a market basket analysis of diseases. Specifically, on display are the combinations of diseases that have the highest lift values. The lift value tells you if the odds of two diseases happening together is higher than if the diseases occurred entirely independently. High lift values indicate a strong relationship between two disease categories.  
+
+<p align="center">
+  <img src="https://github.com/joekrinke15/blog/blob/master/img/mktbsk.PNG?raw=true" />
+</p>
 
 
 ### Co-occurrence Analysis
+Here you can select a disease and view a network of conditions that people with this disease have. This can be used to identify different groups of individuals who all have the same diagnosis.
+
+<p align="center">
+  <img src="https://github.com/joekrinke15/blog/blob/master/img/cooccur.PNG?raw=true" />
+</p>
 
 # Sample Insights and Conclusion
 
