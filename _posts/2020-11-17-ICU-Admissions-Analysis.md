@@ -30,7 +30,7 @@ This section provides information on the most common diseases, patient demograph
 </p>
 
 ### Disease to Demographics
-This portion of the dashboard allows you to select a disease and see what kinds of people have that disease and how they entered the hospital. 
+This portion of the dashboard allows you to select a disease and see typical patient characteristics. 
 
 <p align="center">
   <img src="https://github.com/joekrinke15/blog/blob/master/img/diseasetodemo.PNG?raw=true" />
@@ -69,7 +69,7 @@ While we were building the dashboard we came up with some sample insights to ill
 * Only 49% of patients are admitted to the ICU from the emergency room.
   * Many patients are coming from long-term care facilities.
   
-Overall, our dashboard could serve as a useful tool to physicians and hospital administrators. It can be used to guide potential community-health interventions and monitor the health of various demographic groups. 
+Overall, our dashboard could serve as a useful tool to physicians and hospital administrators. It can be used to guide potential community-health interventions and monitor the health of various demographic groups. If you're interesting in looking at the dashboard feel free to check out the code [here](https://github.com/joekrinke15/MIMIC-Analysis).
 
 # Technologies Used
 <table class="tg">
